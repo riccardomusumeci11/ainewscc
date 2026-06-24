@@ -99,7 +99,7 @@ STATUS_WINDOW = 90     # seconds each pill stays put (60-120 is reasonable)
 STATUS_MAXW = 400      # sanity ceiling only — never CLIP a genuinely wide terminal
 STATUS_FALLBACK_W = 120  # last-resort width when the real one is unknown (never 80)
 
-# ── Gemini summarization (DIGEST/news only; legal-by-design) ──────────────────
+# ── Gemini summarization (NEWS only; legal-by-design) ─────────────────────────
 # Source of the summary is ONLY the RSS extract — never the article body. The key
 # is read from the environment, never stored or committed. Free flash-lite model.
 SUMMARY_CACHE_FILE = os.path.join(DATA, "summaries.json")  # persistent, gitignored
@@ -900,7 +900,7 @@ def interleave_concepts(clusters, concepts):
     return out
 
 
-# ── LLM summarization (DIGEST only; from the RSS extract, never the article) ──
+# ── LLM summarization (NEWS only; from the RSS extract, never the article) ────
 # Gemini is primary; Groq/Cerebras are free OpenAI-compatible fallbacks (see
 # OPENAI_COMPAT_PROVIDERS). On one provider's quota the run drops it and tries the
 # next; if all are exhausted or absent, the pill keeps its raw RSS extract.
@@ -1012,7 +1012,7 @@ def active_providers():
 
 
 def summarize_clusters(clusters, verbose=True):
-    """Fill cluster['summary'] for DIGEST (news) pills that have an RSS extract,
+    """Fill cluster['summary'] for NEWS pills that have an RSS extract,
     rewriting it in new words via the provider chain (Gemini -> Groq -> Cerebras).
     Resilient: a provider's 429 drops only that provider; missing keys / errors ->
     empty summary and the viewer falls back to the extract. Daily-cached per fact."""
@@ -1024,7 +1024,7 @@ def summarize_clusters(clusters, verbose=True):
 
     for c in clusters:
         if c.get("kind") != "news":
-            continue                                   # only DIGEST is summarized
+            continue                                   # only NEWS is summarized
         # Summarize the HEADLINE item's own extract (the story actually shown), not
         # the longest extract in the cluster — otherwise an imperfectly-grouped
         # sibling can produce a summary that contradicts the headline.
@@ -1193,7 +1193,7 @@ def fetch_and_build_news(verbose=True):
     n_raw = len(clusters)
     clusters = [c for c in clusters if worth_showing(c)]
     clusters = clusters[:TOP_NEWS]
-    # Rewrite DIGEST extracts in new words via Gemini (RELEASE untouched).
+    # Rewrite NEWS extracts in new words via Gemini (RELEASE untouched).
     summarize_clusters(clusters, verbose=verbose)
     if verbose:
         multi = sum(1 for c in clusters if c["n_sources"] > 1)
@@ -1358,7 +1358,7 @@ def pill_lines(cluster, inner):
 
 
 # pane header tag by kind — the first word tells you what you're looking at.
-TAGS = {"news": "DIGEST", "changelog": "RELEASE", "concept": "LEARN"}
+TAGS = {"news": "NEWS", "changelog": "RELEASE", "concept": "CONCEPT"}
 
 
 def _pretty_date(iso):
@@ -1392,7 +1392,7 @@ def render(cluster, idx, total, interval, offset, flash=""):
         return f"{PANE_BG} {style}{t}{' ' * pad}{RESET}"
 
     # Top breathing room, then header:  TAG                       3/150 · Jun 23
-    tag = TAGS.get(cluster.get("kind", "news"), "DIGEST")
+    tag = TAGS.get(cluster.get("kind", "news"), "NEWS")
     right = f"{idx + 1}/{total}"
     pretty = _pretty_date(cluster.get("latest"))
     if pretty:
@@ -1682,7 +1682,7 @@ def recap(days=7, top=8):
     if not picks:
         print("Nothing in the window yet.")
     for i, c in enumerate(picks, 1):
-        tag = TAGS.get(c.get("kind", "news"), "DIGEST")
+        tag = TAGS.get(c.get("kind", "news"), "NEWS")
         where = "release" if c.get("kind") == "changelog" else f"{c['n_sources']} source(s)"
         print(f"\n{i:>2}. [{tag}] {c['headline']}")
         print(f"     {where} · {c.get('latest') or 'n/a'} · score {c.get('score', 0):.2f}")
@@ -1810,7 +1810,7 @@ def status_format(pill, width):
     Truncates only at the end, only on word boundaries. Priority: title > gist >
     source; the source is dropped first when space runs out."""
     kind = pill.get("kind", "news")
-    tag = TAGS.get(kind, "DIGEST")
+    tag = TAGS.get(kind, "NEWS")
     color = {"news": HEAD, "changelog": SRC, "concept": LINK}.get(kind, HEAD)
     base = f"▸ {tag}  "
     budget = max(8, width - len(base))
@@ -1967,7 +1967,7 @@ def main():
 
     if not sys.stdin.isatty():
         c = clusters[0]
-        print(f"DIGEST · {c['headline']}  [{c['n_sources']} source(s)]")
+        print(f"NEWS · {c['headline']}  [{c['n_sources']} source(s)]")
         for it in c["items"]:
             print(f"  ▸ {it['source']} · {it['date']}: {it['url']}")
         return 0

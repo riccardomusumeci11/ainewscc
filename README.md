@@ -18,13 +18,13 @@ touch it again.
 
 ```
 ┌───────────────────────────────────┬─────────────────────────────────┐
-│ Claude Code                       │ ▸ DIGEST                3/150    │
+│ Claude Code                       │ ▸ NEWS                 3/150    │
 │                                   │ ─────────────────────────────── │
 │ > refactor the auth module        │ OpenAI launches Daybreak to     │
 │ ● Working… editing auth.py        │ secure every organization       │
 │   running tests                   │ ↻ summarized · OpenAI · ↗ link  │
 │                                   │                                 │
-│                                   │ ▸ LEARN  PYTHON │ the GIL is     │
+│                                   │ ▸ CONCEPT PYTHON │ the GIL is   │
 │                                   │ released around blocking I/O…   │
 └───────────────────────────────────┴─────────────────────────────────┘
    while CC works → news on the right    ·    CC waits for you → full-width
@@ -95,12 +95,12 @@ idle, and gone when it's your turn.
 
 ## What you see
 
-- **DIGEST — AI news.** Headlines from **primary sources only** (official lab blogs,
+- **NEWS — AI news.** Headlines from **primary sources only** (official lab blogs,
   reputable AI press, individual technical voices, arXiv), clustered across outlets
   (one story → one pill listing every source + link), ranked by objective signals,
   and rewritten into neutral 3-to-5-sentence summaries — **clearly labeled as
   AI-generated** (and may contain errors), always attributed and linked.
-- **LEARN — evergreen concepts.** Dense, non-obvious lessons (KV cache, the GIL,
+- **CONCEPT — evergreen concepts.** Dense, non-obvious lessons (KV cache, the GIL,
   MVCC, false sharing, RoPE…) resurfaced on a **spaced-repetition** schedule so they
   actually stick. News you consume and forget; concepts you repeat and keep.
 

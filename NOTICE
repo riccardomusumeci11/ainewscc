@@ -34,9 +34,9 @@ descriptive User-Agent. On HTTP 403/429 the tool backs off and skips the source
 rather than retrying aggressively. No paywalled content is accessed, and no
 scraping beyond the feeds/APIs above is performed.
 
-AI SUMMARIES (DIGEST ONLY, FROM THE RSS EXTRACT)
+AI SUMMARIES (NEWS ONLY, FROM THE RSS EXTRACT)
 ------------------------------------------------
-For news (DIGEST) items, the tool may rewrite the SHORT RSS extract into a fresh
+For NEWS items, the tool may rewrite the SHORT RSS extract into a fresh
 3-to-5-sentence summary using a hosted LLM. A provider chain is tried in order, all on
 free tiers: Google's Gemini (flash-lite), then Groq, then Cerebras. This is done
 legally-by-design:
@@ -46,7 +46,7 @@ legally-by-design:
     not reproduced.
   - Every summarized item STILL shows its source name and a link back to the
     original article. The summary supplements attribution; it never replaces it.
-  - RELEASE (changelog) items and LEARN (evergreen concepts) are NOT summarized.
+  - RELEASE (changelog) items and CONCEPT (evergreen concepts) are NOT summarized.
   - Each provider's API key (GEMINI_API_KEY / GROQ_API_KEY / CEREBRAS_API_KEY) is
     read only from the environment; it is never stored, written to disk, or
     committed. With no keys, or once every provider hits its quota, the tool falls
