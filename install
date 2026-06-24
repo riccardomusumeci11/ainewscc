@@ -1,0 +1,758 @@
+#!/usr/bin/env python3
+"""install — set up Meanwhile in one of two modes, or remove it cleanly.
+
+  ./install --panel        rich side pane (tmux split). Does NOT touch ~/.claude.
+  ./install --statusline   one line INSIDE Claude Code (writes ~/.claude/settings.json,
+                           with a timestamped backup + a careful JSON merge).
+  ./install --uninstall    undo whichever of the above were installed.
+
+Python 3 standard library only. The statusLine path always backs up first, MERGES
+(never overwrites) settings.json, preserves every other key, and refuses to write
+if the existing file isn't valid JSON. Uninstall restores settings.json to exactly
+what it was (our key removed / the previous value put back).
+"""
+
+import argparse
+import json
+import os
+import shutil
+import stat
+import subprocess
+import sys
+from datetime import datetime
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+NEWS_PY = os.path.join(HERE, "news.py")
+STATE_FILE = os.path.join(HERE, ".install-state.json")
+SCRIPTS = ["news", "news.py", "news-tmux", "install"]
+
+# Statusline command Claude Code will run. news.py is made executable below.
+STATUS_COMMAND = f"{NEWS_PY} --statusline"
+STATUS_REFRESH_MS = 1000  # how often CC re-runs it; our rotation is time-gated, so no flicker
+
+# CC-aware: a shared state file the hooks write and the panel reads. Lives outside
+# the repo. The marker uniquely identifies OUR hooks for a clean uninstall.
+CC_STATE_DIR = os.path.expanduser("~/.cc-learn-banner")
+CC_STATE_FILE = os.path.join(CC_STATE_DIR, "cc_state")
+CC_HOOK_MARKER = ".cc-learn-banner/cc_state"   # appears in our cc-aware hook commands
+_CC_WAIT = 'echo WAITING > "$HOME/.cc-learn-banner/cc_state"'
+_CC_WORK = 'echo WORKING > "$HOME/.cc-learn-banner/cc_state"'
+
+# Lifecycle: open/close the panel WINDOW on Claude Code session start/end.
+OPEN_PANEL = os.path.join(HERE, "open_panel.sh")
+CLOSE_PANEL = os.path.join(HERE, "close_panel.sh")
+LIFECYCLE_MARKERS = ("open_panel.sh", "close_panel.sh")  # identify our lifecycle hooks
+
+# tmux split: show a news pane beside CC while working, close it while waiting.
+SHOW_PANEL = os.path.join(HERE, "panel_show.sh")
+HIDE_PANEL = os.path.join(HERE, "panel_hide.sh")
+TMUX_MARKERS = ("panel_show.sh", "panel_hide.sh")
+
+# Shell wrapper so `claude` always launches inside tmux (so the pane can split in).
+WRAPPER_MARKER = "cc-learn-banner (news split in tmux)"
+WRAPPER_BLOCK = f"""
+# >>> {WRAPPER_MARKER} >>>
+# Launch Claude Code inside tmux so the news pane can split in beside it.
+# No-op if already in tmux or non-interactive (avoids recursion).
+# Each launch gets its own uniquely-named session (cc-<pid>) so multiple Claude
+# Code sessions run independently, each with its own news panel.
+claude() {{
+  if [ -n "$TMUX" ] || [ ! -t 1 ]; then
+    command claude "$@"
+  else
+    tmux new-session -s "cc-$$" "command claude $*"
+  fi
+}}
+# <<< cc-learn-banner <<<
+"""
+
+
+def shell_rc():
+    """The rc file to edit for the `claude` wrapper (zsh by default on macOS)."""
+    shell = os.environ.get("SHELL", "")
+    home = os.path.expanduser("~")
+    if "bash" in shell:
+        return os.path.join(home, ".bashrc")
+    return os.path.join(home, ".zshrc")
+
+
+def add_shell_wrapper():
+    """Append the `claude` wrapper to the user's rc (idempotent, backed up first)."""
+    rc = shell_rc()
+    existing = ""
+    if os.path.exists(rc):
+        with open(rc, encoding="utf-8") as f:
+            existing = f.read()
+    if WRAPPER_MARKER in existing:
+        return rc, "present"
+    if os.path.exists(rc):
+        shutil.copy2(rc, f"{rc}.bak-{datetime.now().strftime('%Y%m%d-%H%M%S')}")
+    with open(rc, "a", encoding="utf-8") as f:
+        if existing and not existing.endswith("\n"):
+            f.write("\n")
+        f.write(WRAPPER_BLOCK)
+    return rc, "added"
+
+
+def remove_our_statusline():
+    """Remove the statusLine pill IF it's ours — the side panel replaces it."""
+    sp = settings_path()
+    if not os.path.exists(sp):
+        return
+    try:
+        with open(sp, encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError:
+        return
+    if not isinstance(data, dict):
+        return
+    cur = data.get("statusLine")
+    if isinstance(cur, dict) and "news.py --statusline" in (cur.get("command") or ""):
+        data.pop("statusLine", None)
+        with open(sp, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        info("removed the statusline pill (the side panel replaces it).")
+
+
+def remove_shell_wrapper():
+    """Remove our wrapper block from the rc file (backed up first)."""
+    rc = shell_rc()
+    if not os.path.exists(rc):
+        return
+    with open(rc, encoding="utf-8") as f:
+        text = f.read()
+    if WRAPPER_MARKER not in text:
+        return
+    import re
+    new = re.sub(r"\n*# >>> cc-learn-banner.*?# <<< cc-learn-banner <<<\n?",
+                 "\n", text, flags=re.DOTALL)
+    shutil.copy2(rc, f"{rc}.bak-{datetime.now().strftime('%Y%m%d-%H%M%S')}")
+    with open(rc, "w", encoding="utf-8") as f:
+        f.write(new)
+    info(f"removed the `claude` wrapper from {rc}")
+
+
+def cc_hook_groups():
+    """cc-aware: WAITING on permission/idle notifications; WORKING on a user prompt
+    and on any tool use (reinforces 'CC is working again')."""
+    return {
+        "Notification": [
+            {"matcher": "permission_prompt",
+             "hooks": [{"type": "command", "command": _CC_WAIT}]},
+            {"matcher": "idle_prompt",
+             "hooks": [{"type": "command", "command": _CC_WAIT}]},
+        ],
+        "UserPromptSubmit": [
+            {"hooks": [{"type": "command", "command": _CC_WORK}]},
+        ],
+        "PreToolUse": [
+            {"hooks": [{"type": "command", "command": _CC_WORK}]},
+        ],
+    }
+
+
+def lifecycle_hook_groups():
+    """lifecycle: open the panel window when a CC session starts, close it on end."""
+    return {
+        "SessionStart": [{"hooks": [{"type": "command", "command": OPEN_PANEL}]}],
+        "SessionEnd": [{"hooks": [{"type": "command", "command": CLOSE_PANEL}]}],
+    }
+
+
+def tmux_hook_groups():
+    """tmux split: show the news pane beside CC while CC is working, hide it the
+    moment CC waits for you — approval prompt, idle, end of turn, or session end —
+    so CC goes full-width.
+
+    SHOW on UserPromptSubmit (turn starts) and PostToolUse (a tool finished, CC is
+    still working). The pane is persistent, so it stays up between these until a hide
+    fires. We deliberately do NOT show on PreToolUse: that's the exact moment an
+    approval dialog can appear, and showing-then-hiding would flash the pane.
+    HIDE on PermissionRequest — it fires the instant the approval dialog appears, so
+    the pane vanishes immediately; Notification(permission_prompt) stays as a backstop
+    for the case it doesn't, and idle/Stop/SessionEnd cover the other waits."""
+    return {
+        "UserPromptSubmit": [{"hooks": [{"type": "command", "command": SHOW_PANEL}]}],
+        "PostToolUse": [{"hooks": [{"type": "command", "command": SHOW_PANEL}]}],
+        "PermissionRequest": [{"hooks": [{"type": "command", "command": HIDE_PANEL}]}],
+        "Stop": [{"hooks": [{"type": "command", "command": HIDE_PANEL}]}],
+        "Notification": [
+            {"matcher": "permission_prompt",
+             "hooks": [{"type": "command", "command": HIDE_PANEL}]},
+            {"matcher": "idle_prompt",
+             "hooks": [{"type": "command", "command": HIDE_PANEL}]},
+        ],
+        "SessionEnd": [{"hooks": [{"type": "command", "command": HIDE_PANEL}]}],
+    }
+
+
+def _is_ccaware_group(group):
+    if not isinstance(group, dict):
+        return False
+    return any(isinstance(h, dict) and CC_HOOK_MARKER in (h.get("command") or "")
+               for h in group.get("hooks", []))
+
+
+def _is_lifecycle_group(group):
+    if not isinstance(group, dict):
+        return False
+    return any(isinstance(h, dict)
+               and any(m in (h.get("command") or "") for m in LIFECYCLE_MARKERS)
+               for h in group.get("hooks", []))
+
+
+def _is_tmux_group(group):
+    if not isinstance(group, dict):
+        return False
+    return any(isinstance(h, dict)
+               and any(m in (h.get("command") or "") for m in TMUX_MARKERS)
+               for h in group.get("hooks", []))
+
+
+def _is_any_our_group(group):
+    return (_is_ccaware_group(group) or _is_lifecycle_group(group)
+            or _is_tmux_group(group))
+
+
+def _has_ccaware_hooks(data):
+    hooks = data.get("hooks", {}) if isinstance(data, dict) else {}
+    return any(_is_ccaware_group(g)
+               for arr in hooks.values() if isinstance(arr, list) for g in arr)
+
+
+# ── small helpers ────────────────────────────────────────────────────────────
+def claude_dir():
+    """Honors CLAUDE_CONFIG_DIR (the real Claude Code override); else ~/.claude.
+    This is also what lets the install be tested against a throwaway dir."""
+    return os.environ.get("CLAUDE_CONFIG_DIR") or os.path.expanduser("~/.claude")
+
+
+def settings_path():
+    return os.path.join(claude_dir(), "settings.json")
+
+
+def load_state():
+    try:
+        with open(STATE_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def save_state(state):
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2)
+        f.write("\n")
+
+
+def make_executable(path):
+    if os.path.exists(path):
+        st = os.stat(path)
+        os.chmod(path, st.st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+
+
+def info(msg):
+    print(f"  {msg}")
+
+
+# ── A. panel mode (zero-risk; never touches ~/.claude unless --with-slash-command) ──
+def cmd_panel(with_slash):
+    print("Meanwhile · panel mode (rich side pane)")
+    for s in SCRIPTS:
+        make_executable(os.path.join(HERE, s))
+    info("made scripts executable.")
+
+    # A small launcher that opens the tmux side layout (or degrades gracefully).
+    ccnews = os.path.join(HERE, "ccnews")
+    with open(ccnews, "w", encoding="utf-8") as f:
+        f.write("#!/usr/bin/env bash\n"
+                "# Meanwhile launcher (created by ./install --panel)\n"
+                f'exec "{os.path.join(HERE, "news-tmux")}" "$@"\n')
+    make_executable(ccnews)
+    info(f"created launcher: {ccnews}")
+
+    state = load_state()
+    panel = {"ccnews": ccnews}
+
+    # Try to expose `ccnews` on PATH via ~/.local/bin if it's already on PATH;
+    # otherwise just print the alias line (zero changes to the user's shell).
+    local_bin = os.path.expanduser("~/.local/bin")
+    on_path = local_bin in os.environ.get("PATH", "").split(os.pathsep)
+    link = os.path.join(local_bin, "ccnews")
+    if on_path and os.path.isdir(local_bin) and os.access(local_bin, os.W_OK):
+        try:
+            if os.path.islink(link) or os.path.exists(link):
+                os.remove(link)
+            os.symlink(ccnews, link)
+            panel["symlink"] = link
+            info(f"linked into PATH: {link}  →  run `ccnews`")
+        except OSError as e:
+            info(f"could not link into PATH ({e.__class__.__name__}); add an alias instead:")
+            info(f'    alias ccnews="{ccnews}"')
+    else:
+        info("to get a `ccnews` command, add this alias to your shell rc:")
+        info(f'    alias ccnews="{ccnews}"')
+
+    # Opt-in only: the single case where panel mode touches ~/.claude.
+    if with_slash:
+        dst_dir = os.path.join(claude_dir(), "commands")
+        os.makedirs(dst_dir, exist_ok=True)
+        dst = os.path.join(dst_dir, "install.md")
+        shutil.copy2(os.path.join(HERE, "commands", "install.md"), dst)
+        panel["slash_command"] = dst
+        info(f"copied slash command (opt-in): {dst}")
+
+    state["panel"] = panel
+    save_state(state)
+    print("done. Open a pane and run ./news, or `ccnews` for the tmux layout.")
+    return 0
+
+
+# ── B. statusline mode (writes ~/.claude/settings.json — handled with care) ──
+def cmd_statusline():
+    print("Meanwhile · statusline mode (one line inside Claude Code)")
+    make_executable(NEWS_PY)
+    sp = settings_path()
+
+    backup = None
+    if os.path.exists(sp):
+        # Refuse to write if the existing file isn't valid JSON — never corrupt it.
+        try:
+            with open(sp, encoding="utf-8") as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"  ERROR: {sp} is not valid JSON ({e}).", file=sys.stderr)
+            print("  Refusing to write. Fix the file by hand, then re-run.",
+                  file=sys.stderr)
+            return 1
+        if not isinstance(data, dict):
+            print(f"  ERROR: {sp} is not a JSON object. Refusing to write.",
+                  file=sys.stderr)
+            return 1
+        backup = f"{sp}.bak-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+        shutil.copy2(sp, backup)
+        info(f"backed up existing settings → {backup}")
+    else:
+        os.makedirs(os.path.dirname(sp), exist_ok=True)
+        data = {}
+        info(f"no settings.json yet — creating {sp}")
+
+    prev = data.get("statusLine")  # remember what was there (may be None)
+    data["statusLine"] = {
+        "type": "command",
+        "command": STATUS_COMMAND,
+        "padding": 0,
+        "refreshInterval": STATUS_REFRESH_MS,
+    }
+    with open(sp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    # Verify: it must re-read as valid JSON pointing at our command.
+    with open(sp, encoding="utf-8") as f:
+        check = json.load(f)
+    if check.get("statusLine", {}).get("command") != STATUS_COMMAND:
+        print("  ERROR: post-write verification failed.", file=sys.stderr)
+        return 1
+    info("merged statusLine key (all other keys preserved) and verified.")
+
+    state = load_state()
+    state["statusline"] = {
+        "settings_file": sp, "backup": backup,
+        "prev_statusLine": prev, "command": STATUS_COMMAND,
+    }
+    save_state(state)
+    print("done. Claude Code will show the Meanwhile line on its next render.")
+    return 0
+
+
+# ── C. cc-aware hooks (panel hides while Claude Code waits for you) ───────────
+def cmd_cc_aware():
+    print("Meanwhile · cc-aware (panel hides while Claude Code waits)")
+    sp = settings_path()
+
+    backup = None
+    if os.path.exists(sp):
+        try:
+            with open(sp, encoding="utf-8") as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"  ERROR: {sp} is not valid JSON ({e}).", file=sys.stderr)
+            print("  Refusing to write. Fix the file by hand, then re-run.",
+                  file=sys.stderr)
+            return 1
+        if not isinstance(data, dict):
+            print(f"  ERROR: {sp} is not a JSON object. Refusing to write.",
+                  file=sys.stderr)
+            return 1
+        backup = f"{sp}.bak-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+        shutil.copy2(sp, backup)
+        info(f"backed up existing settings → {backup}")
+    else:
+        os.makedirs(os.path.dirname(sp), exist_ok=True)
+        data = {}
+        info(f"no settings.json yet — creating {sp}")
+
+    # Create the shared state dir + initial WORKING state (panel shows by default).
+    os.makedirs(CC_STATE_DIR, exist_ok=True)
+    if not os.path.exists(CC_STATE_FILE):
+        with open(CC_STATE_FILE, "w", encoding="utf-8") as f:
+            f.write("WORKING\n")
+
+    # MERGE: add only our hook groups, removing any prior copy of ours first
+    # (idempotent), preserving every other hook and key.
+    hooks = data.setdefault("hooks", {})
+    for event, groups in cc_hook_groups().items():
+        arr = hooks.setdefault(event, [])
+        arr[:] = [g for g in arr if not _is_ccaware_group(g)] + groups
+
+    with open(sp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    # Verify: re-reads as valid JSON and our groups are present.
+    with open(sp, encoding="utf-8") as f:
+        check = json.load(f)
+    ok = all(any(_is_ccaware_group(g) for g in check.get("hooks", {}).get(ev, []))
+             for ev in cc_hook_groups())
+    if not ok:
+        print("  ERROR: post-write verification failed.", file=sys.stderr)
+        return 1
+    info("merged Notification/UserPromptSubmit/PreToolUse hooks (others preserved).")
+
+    state = load_state()
+    state["cc_aware"] = {"settings_file": sp, "backup": backup,
+                         "events": list(cc_hook_groups())}
+    save_state(state)
+    print("done. The ./news panel will hide while Claude Code waits for you.")
+    return 0
+
+
+# ── D. lifecycle hooks (panel window opens/closes with the CC session) ────────
+def cmd_lifecycle():
+    print("Meanwhile · lifecycle (panel window opens/closes with Claude Code)")
+    sp = settings_path()
+    for s in (OPEN_PANEL, CLOSE_PANEL):
+        make_executable(s)
+
+    backup = None
+    if os.path.exists(sp):
+        try:
+            with open(sp, encoding="utf-8") as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"  ERROR: {sp} is not valid JSON ({e}).", file=sys.stderr)
+            print("  Refusing to write. Fix the file by hand, then re-run.",
+                  file=sys.stderr)
+            return 1
+        if not isinstance(data, dict):
+            print(f"  ERROR: {sp} is not a JSON object. Refusing to write.",
+                  file=sys.stderr)
+            return 1
+        backup = f"{sp}.bak-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+        shutil.copy2(sp, backup)
+        info(f"backed up existing settings → {backup}")
+    else:
+        os.makedirs(os.path.dirname(sp), exist_ok=True)
+        data = {}
+        info(f"no settings.json yet — creating {sp}")
+
+    # lifecycle presupposes cc-aware: check (don't duplicate) and advise if missing.
+    if not _has_ccaware_hooks(data):
+        info("NOTE: cc-aware state hooks not found in settings — the panel will open")
+        info("      but won't hide while CC waits. Run ./install --cc-aware too.")
+
+    os.makedirs(CC_STATE_DIR, exist_ok=True)   # holds the panel window id
+
+    # MERGE: add ONLY our SessionStart/SessionEnd groups (idempotent), keep the rest.
+    hooks = data.setdefault("hooks", {})
+    for event, groups in lifecycle_hook_groups().items():
+        arr = hooks.setdefault(event, [])
+        arr[:] = [g for g in arr if not _is_lifecycle_group(g)] + groups
+
+    with open(sp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    with open(sp, encoding="utf-8") as f:
+        check = json.load(f)
+    ok = all(any(_is_lifecycle_group(g) for g in check.get("hooks", {}).get(ev, []))
+             for ev in lifecycle_hook_groups())
+    if not ok:
+        print("  ERROR: post-write verification failed.", file=sys.stderr)
+        return 1
+    info("merged SessionStart/SessionEnd hooks (every other hook/key preserved).")
+
+    state = load_state()
+    state["lifecycle"] = {"settings_file": sp, "backup": backup,
+                          "events": list(lifecycle_hook_groups())}
+    save_state(state)
+    print("done. A panel window will open with Claude Code and close when you exit.")
+    return 0
+
+
+# ── E. tmux split (news pane beside CC, in the SAME window) ───────────────────
+def cmd_tmux():
+    print("Meanwhile · tmux split (news pane beside Claude Code)")
+    sp = settings_path()
+    for s in (SHOW_PANEL, HIDE_PANEL):
+        make_executable(s)
+
+    backup = None
+    if os.path.exists(sp):
+        try:
+            with open(sp, encoding="utf-8") as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"  ERROR: {sp} is not valid JSON ({e}).", file=sys.stderr)
+            print("  Refusing to write. Fix the file by hand, then re-run.",
+                  file=sys.stderr)
+            return 1
+        if not isinstance(data, dict):
+            print(f"  ERROR: {sp} is not a JSON object. Refusing to write.",
+                  file=sys.stderr)
+            return 1
+        backup = f"{sp}.bak-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+        shutil.copy2(sp, backup)
+        info(f"backed up existing settings → {backup}")
+    else:
+        os.makedirs(os.path.dirname(sp), exist_ok=True)
+        data = {}
+        info(f"no settings.json yet — creating {sp}")
+
+    os.makedirs(CC_STATE_DIR, exist_ok=True)
+
+    # This mode REPLACES the separate-window / cc-aware hooks: remove ALL of ours
+    # first (so the two approaches don't fight), then add the tmux split hooks.
+    hooks = data.setdefault("hooks", {})
+    for event in list(hooks.keys()):
+        if isinstance(hooks[event], list):
+            hooks[event] = [g for g in hooks[event] if not _is_any_our_group(g)]
+            if not hooks[event]:
+                del hooks[event]
+    for event, groups in tmux_hook_groups().items():
+        hooks.setdefault(event, []).extend(groups)
+
+    with open(sp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    with open(sp, encoding="utf-8") as f:
+        check = json.load(f)
+    ok = all(any(_is_tmux_group(g) for g in check.get("hooks", {}).get(ev, []))
+             for ev in tmux_hook_groups())
+    if not ok:
+        print("  ERROR: post-write verification failed.", file=sys.stderr)
+        return 1
+    info("merged tmux split hooks (show on work, hide on wait); other keys preserved.")
+
+    state = load_state()
+    state.pop("cc_aware", None)        # those hooks were just removed
+    state.pop("lifecycle", None)
+    state["tmux"] = {"settings_file": sp, "backup": backup,
+                     "events": list(tmux_hook_groups())}
+    save_state(state)
+    print("done. Run Claude Code INSIDE tmux; a news pane will split in beside it")
+    print("while it works and close while it waits for you.")
+    return 0
+
+
+# ── ★ quickstart (the one-command, recommended setup) ────────────────────────
+def cmd_quickstart():
+    print("Meanwhile · quickstart — the tmux side panel, set up in one go")
+    if not shutil.which("tmux"):
+        print("  NOTE: tmux isn't installed — the panel splits inside tmux.", file=sys.stderr)
+        print("        Install it first:  brew install tmux   (then re-run).", file=sys.stderr)
+
+    for s in ("news", "news.py", "news-tmux", "install",
+              "open_panel.sh", "close_panel.sh", "panel_show.sh", "panel_hide.sh"):
+        make_executable(os.path.join(HERE, s))
+
+    # 1) install the tmux split hooks (backup + safe merge; replaces other modes)
+    rc = cmd_tmux()
+    if rc != 0:
+        return rc
+
+    # the side panel replaces the bottom statusline pill — drop ours if present
+    remove_our_statusline()
+
+    # 2) make `claude` always open inside tmux (so the pane can split in)
+    rc_path, status = add_shell_wrapper()
+    if status == "added":
+        info(f"added a `claude` wrapper to {rc_path} (opens Claude Code in tmux)")
+    else:
+        info(f"`claude` wrapper already present in {rc_path}")
+    state = load_state()
+    state["wrapper"] = {"rc": rc_path}
+    save_state(state)
+
+    print("")
+    print("★ Done. Open a NEW terminal and run:   claude")
+    print("  A news digest pane splits in beside Claude Code while it works,")
+    print("  and closes (CC full-width) while it waits for you.")
+    print("  (For AI summaries, set a free key:  export GEMINI_API_KEY=…)")
+    return 0
+
+
+# ── F. uninstall (undo all modes) ────────────────────────────────────────────
+def cmd_uninstall():
+    print("Meanwhile · uninstall")
+    state = load_state()
+
+    panel = state.get("panel", {})
+    link = panel.get("symlink")
+    if link and (os.path.islink(link) or os.path.exists(link)):
+        try:
+            os.remove(link)
+            info(f"removed PATH shortcut: {link}")
+        except OSError as e:
+            info(f"could not remove {link} ({e.__class__.__name__})")
+    elif panel:
+        info('if you added an `alias ccnews=...` line, remove it from your shell rc.')
+    ccnews = panel.get("ccnews")
+    if ccnews and os.path.exists(ccnews):
+        try:
+            os.remove(ccnews)
+            info(f"removed launcher: {ccnews}")
+        except OSError:
+            pass
+    slash = panel.get("slash_command")
+    if slash and os.path.exists(slash):
+        try:
+            os.remove(slash)
+            info(f"removed slash command: {slash}")
+        except OSError:
+            pass
+
+    st = state.get("statusline")
+    if st:
+        sp = st["settings_file"]
+        if os.path.exists(sp):
+            try:
+                with open(sp, encoding="utf-8") as f:
+                    data = json.load(f)
+            except json.JSONDecodeError:
+                data = None
+                info(f"{sp} is not valid JSON now; leaving it untouched.")
+            if isinstance(data, dict):
+                cur = data.get("statusLine")
+                if isinstance(cur, dict) and cur.get("command") == st["command"]:
+                    prev = st.get("prev_statusLine")
+                    if prev is not None:
+                        data["statusLine"] = prev        # put the old one back
+                        info("restored the previous statusLine value.")
+                    else:
+                        data.pop("statusLine", None)      # we added it: remove it
+                        info("removed our statusLine key (other keys untouched).")
+                    with open(sp, "w", encoding="utf-8") as f:
+                        json.dump(data, f, indent=2, ensure_ascii=False)
+                        f.write("\n")
+                else:
+                    info("statusLine is not ours (or was changed) — leaving it as is.")
+        backup = st.get("backup")
+        if backup and os.path.exists(backup):
+            if sys.stdin.isatty():
+                ans = input(f"  A backup exists ({backup}). Restore it? [y/N] ").strip().lower()
+                if ans == "y":
+                    shutil.copy2(backup, sp)
+                    info("restored settings.json from backup.")
+            else:
+                info(f"backup available — restore manually if you prefer:")
+                info(f"    cp '{backup}' '{sp}'")
+
+    cc = state.get("cc_aware") or state.get("lifecycle") or state.get("tmux")
+    if cc:
+        sp = cc["settings_file"]
+        # Best-effort: close an open panel window and/or tmux pane before teardown.
+        for script in (CLOSE_PANEL, HIDE_PANEL):
+            if os.path.exists(script):
+                try:
+                    subprocess.run([script], timeout=20,
+                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                except Exception:  # noqa: BLE001 — teardown convenience only
+                    pass
+        if os.path.exists(sp):
+            try:
+                with open(sp, encoding="utf-8") as f:
+                    data = json.load(f)
+            except json.JSONDecodeError:
+                data = None
+                info(f"{sp} is not valid JSON now; leaving its hooks untouched.")
+            if isinstance(data, dict) and isinstance(data.get("hooks"), dict):
+                hooks = data["hooks"]
+                for event in list(hooks.keys()):          # remove ONLY our groups
+                    if isinstance(hooks[event], list):    # cc-aware, lifecycle, tmux
+                        hooks[event] = [g for g in hooks[event] if not _is_any_our_group(g)]
+                        if not hooks[event]:
+                            del hooks[event]              # prune arrays we emptied
+                if not hooks:
+                    del data["hooks"]                     # prune the dict if we created it
+                with open(sp, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                    f.write("\n")
+                info("removed our cc-aware/lifecycle/tmux hooks (every other hook/key intact).")
+        # remove the whole runtime dir (cc_state, panel_window_id/tty, …)
+        if os.path.isdir(CC_STATE_DIR):
+            try:
+                shutil.rmtree(CC_STATE_DIR)
+                info(f"removed {CC_STATE_DIR}")
+            except OSError:
+                pass
+
+    # remove the `claude` shell wrapper if we added it
+    remove_shell_wrapper()
+
+    if os.path.exists(STATE_FILE):
+        os.remove(STATE_FILE)
+    print("done. The project folder can now be deleted with `rm -rf` if you like.")
+    return 0
+
+
+def main():
+    ap = argparse.ArgumentParser(
+        description="Install Meanwhile as a side panel or a Claude Code statusline.")
+    g = ap.add_mutually_exclusive_group(required=True)
+    g.add_argument("--panel", action="store_true",
+                   help="rich tmux side pane (does NOT touch ~/.claude)")
+    g.add_argument("--statusline", action="store_true",
+                   help="one line inside Claude Code (merges ~/.claude/settings.json)")
+    g.add_argument("--cc-aware", dest="cc_aware", action="store_true",
+                   help="hooks so the ./news panel hides while CC waits for input "
+                        "(merges ~/.claude/settings.json)")
+    g.add_argument("--lifecycle", action="store_true",
+                   help="SessionStart/SessionEnd hooks that auto-open/close the "
+                        "panel window with the CC session (merges settings.json)")
+    g.add_argument("--tmux", action="store_true",
+                   help="run CC inside tmux: a news pane splits in beside CC while "
+                        "it works and closes while it waits (merges settings.json)")
+    g.add_argument("--quickstart", action="store_true",
+                   help="RECOMMENDED: one-shot setup — tmux split hooks + a `claude` "
+                        "wrapper so it always opens in tmux. Then just run `claude`.")
+    g.add_argument("--uninstall", action="store_true",
+                   help="undo whichever modes were installed (incl. the shell wrapper)")
+    ap.add_argument("--with-slash-command", action="store_true",
+                    help="panel only: also copy commands/install.md into "
+                         "~/.claude/commands/ (opt-in; the one panel-mode "
+                         "~/.claude touch)")
+    args = ap.parse_args()
+
+    if args.panel:
+        return cmd_panel(args.with_slash_command)
+    if args.statusline:
+        return cmd_statusline()
+    if args.cc_aware:
+        return cmd_cc_aware()
+    if args.lifecycle:
+        return cmd_lifecycle()
+    if args.tmux:
+        return cmd_tmux()
+    if args.quickstart:
+        return cmd_quickstart()
+    if args.uninstall:
+        return cmd_uninstall()
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

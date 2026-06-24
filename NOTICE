@@ -1,0 +1,106 @@
+Meanwhile — content and usage notice
+=======================================
+
+WHAT THIS TOOL IS
+-----------------
+Meanwhile is a *headline aggregator*. It reads publicly syndicated feeds and
+public, key-free APIs that are explicitly designed for programmatic access, and
+shows a clustered daily digest of what is being published about AI/tech.
+
+For each item it stores and displays ONLY:
+  - the title
+  - the source/publisher name
+  - the publication date
+  - a SHORT extract (≈700 characters max) taken from the summary the source
+    itself publishes in its feed
+  - the canonical link to the original article
+
+It NEVER fetches, stores, or displays the article body or `content:encoded`.
+The link always points back to the publisher.
+
+SOURCES (PRIMARY ONLY)
+----------------------
+Content is fetched only from PRIMARY sources — first-party lab blogs, reputable
+press, and individual technical authors — never from aggregators or curated
+newsletters (re-summarizing those is a copyright-risk zone). Specifically:
+  - RSS / Atom feeds published by the source for syndication
+  - the arXiv API (export.arxiv.org) — public, no key
+  - release/changelog Atom feeds (GitHub releases.atom) — public, no key
+  (The Hacker News Search API is supported but disabled by default: it carries
+   no syndicated summary to work from.)
+
+Fetching is rate-limited to at most once per day (lazy cache). Requests send a
+descriptive User-Agent. On HTTP 403/429 the tool backs off and skips the source
+rather than retrying aggressively. No paywalled content is accessed, and no
+scraping beyond the feeds/APIs above is performed.
+
+AI SUMMARIES (DIGEST ONLY, FROM THE RSS EXTRACT)
+------------------------------------------------
+For news (DIGEST) items, the tool may rewrite the SHORT RSS extract into a fresh
+3-to-5-sentence summary using a hosted LLM. A provider chain is tried in order, all on
+free tiers: Google's Gemini (flash-lite), then Groq, then Cerebras. This is done
+legally-by-design:
+  - The ONLY input to the model is the publisher's own syndicated extract — never
+    the article body, never scraped page content.
+  - The model is asked to rewrite the facts in NEW words; the original phrasing is
+    not reproduced.
+  - Every summarized item STILL shows its source name and a link back to the
+    original article. The summary supplements attribution; it never replaces it.
+  - RELEASE (changelog) items and LEARN (evergreen concepts) are NOT summarized.
+  - Each provider's API key (GEMINI_API_KEY / GROQ_API_KEY / CEREBRAS_API_KEY) is
+    read only from the environment; it is never stored, written to disk, or
+    committed. With no keys, or once every provider hits its quota, the tool falls
+    back to showing the original RSS extract.
+  - Summaries are clearly LABELED as AI-generated (a "↻ AI summary" marker) so they
+    are never presented as human-written journalism, and may contain errors — they
+    supplement the linked original, which stays canonical.
+  - Each provider's terms permit using and redistributing model outputs. Via Groq or
+    Cerebras the summary may be produced by an open Llama-family model; outputs are
+    redistributed subject to that model's license. (Gemini's free tier may use
+    submitted content to improve Google's products — the only input is already-public
+    RSS snippets, never private data.)
+
+CENTRAL FEED (REDISTRIBUTION)
+-----------------------------
+By default, clients do not summarize locally: a maintainer builds the digest once
+a day and publishes a small JSON (titles, short syndicated extracts, the rewritten
+summaries, and links) that clients pull. This redistributes short, attributed
+snippets plus original summaries — never article bodies — each item linking back to
+its publisher. Only primary sources are included. A publisher who wishes to be
+excluded can be removed from data/feeds.txt; on request, remove the feed and
+rebuild. Anyone may instead run their own feed (their own key) and point clients at
+it via NEWS_FEED_URL.
+
+ATTRIBUTION AND OWNERSHIP
+-------------------------
+All titles, extracts, and links remain the property of their respective
+publishers and authors. Every item is shown WITH its source name and a link back
+to the original. This tool claims no ownership over any aggregated content; any
+AI summary it adds is derived solely from the publisher's syndicated extract and
+is always accompanied by attribution and a link.
+
+TAKEDOWN / REMOVAL REQUESTS
+---------------------------
+If you are a publisher or rights holder and want your source excluded, open an
+issue on the project's GitHub repository with the label "takedown":
+  https://github.com/riccardomusumeci11/meanwhile/issues
+Requests are honored promptly and in good faith: the feed is removed from
+data/feeds.txt, the central feed is rebuilt, and the source no longer appears. No
+justification is required. Every item already links back to your original article
+and shows your name; this project claims no ownership over any aggregated content.
+
+DISCLAIMER (NO AFFILIATION / TRADEMARKS)
+----------------------------------------
+Meanwhile is an independent, non-commercial, open-source project. It is NOT
+affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, Google, or any of
+the publishers or sources it links to. "Claude" and "Claude Code" are trademarks of
+Anthropic; "Gemini" is a trademark of Google; all other product names, logos, and
+brands are the property of their respective owners and are used here for
+identification (nominative) purposes only. The software is provided "as is",
+without warranty of any kind, as stated in the MIT LICENSE.
+
+FOR CONTRIBUTORS
+----------------
+When adding a feed to data/feeds.txt, add only PRIMARY sources you are authorized
+to read and that publish their content for syndication. Do not add aggregators or
+curated newsletters. If a publisher asks to be removed, remove their feed.

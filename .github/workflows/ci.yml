@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile (stdlib only, no deps)
+        run: python3 -m py_compile news.py install
+      - name: Lint the one-line installer
+        run: bash -n install.sh
+      - name: Statusline smoke test (cache-only, prints one line, exit 0)
+        run: echo '{}' | python3 news.py --statusline && echo
+      - name: Recap must not crash without a cache
+        run: python3 news.py --recap

@@ -1,0 +1,87 @@
+# Meanwhile — sources, one per line. Blank lines and lines starting with # are ignored.
+#
+# FOUR source types are supported (all free, no API key):
+#   1. An http(s) URL            -> an RSS or Atom feed
+#   2. arxiv:<category>          -> the arXiv API (export.arxiv.org), no key
+#   3. hn:<query>                -> the Hacker News Algolia API, no key
+#   4. changelog:<atom-url>      -> a release/changelog Atom feed (GitHub releases.atom)
+#
+# PRIMARY SOURCES ONLY. No aggregators / curated newsletters (TLDR, Last Week in
+# AI, AI Weekly, …): re-summarizing those is a copyright-risk zone. This tool reads
+# ONLY syndicated titles/short summaries + links and always attributes the source.
+# DIGEST (news) extracts are rewritten by Gemini at refresh; see NOTICE. Dead or
+# unparseable sources are skipped automatically. All URLs below were checked live.
+
+# ════════════════ AI NEWS (DIGEST) — primary sources ════════════════
+
+# ── Official AI labs / org research ──
+https://openai.com/news/rss.xml
+https://research.google/blog/rss/
+https://deepmind.google/blog/feed/basic/
+https://mistral.ai/rss.xml
+https://www.microsoft.com/en-us/research/feed/
+https://blogs.nvidia.com/feed/
+https://aws.amazon.com/blogs/machine-learning/feed/
+https://news.mit.edu/rss/topic/artificial-intelligence2
+https://bair.berkeley.edu/blog/feed.xml
+https://www.together.ai/blog/rss.xml
+# Anthropic: no public RSS feed (anthropic.com/rss.xml + /news/rss.xml both 404) — omitted.
+# Meta AI: no public RSS feed (ai.meta.com/blog/rss + /feed both 404) — omitted.
+# research.google has no per-item RSS summary (title + link only); kept as a primary
+# launch signal but it won't carry an extract to rewrite.
+
+# ── AI / tech press ──
+https://the-decoder.com/feed/
+https://techcrunch.com/category/artificial-intelligence/feed/
+https://venturebeat.com/category/ai/feed/
+https://www.technologyreview.com/feed/
+https://www.theverge.com/rss/index.xml
+https://arstechnica.com/ai/feed/
+https://www.wired.com/feed/tag/ai/latest/rss
+https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
+https://www.theregister.com/software/ai_ml/headlines.atom
+# The Verge publishes only one site-wide RSS (no AI-only feed); it carries some
+# non-AI items, which simply rank low rather than being dropped.
+
+# ── Technical voices ──
+https://huggingface.co/blog/feed.xml
+https://simonwillison.net/atom/everything/
+https://magazine.sebastianraschka.com/feed
+https://thegradient.pub/rss/
+https://lilianweng.github.io/index.xml
+https://huyenchip.com/feed.xml
+https://eugeneyan.com/rss/
+https://karpathy.github.io/feed.xml
+https://www.interconnects.ai/feed
+https://jalammar.github.io/feed.xml
+# huggingface blog feed is title + link only (no RSS summary to rewrite).
+
+# ── arXiv API (primary research, no key) ──
+arxiv:cs.CL
+arxiv:cs.AI
+arxiv:cs.LG
+
+# ════════════════ CHANGELOG (RELEASE pills) — DISABLED ════════════════
+# Turned off on purpose: version bumps, technical fixes and PR lists are noise
+# for a news digest. The digest now shows only DIGEST (news) + LEARN (concepts).
+# To bring RELEASE pills back, just uncomment the lines below (nothing else needed —
+# the changelog pipeline is unchanged, only the sources are off).
+# changelog:https://github.com/anthropics/claude-code/releases.atom
+# changelog:https://github.com/fastapi/fastapi/releases.atom
+# changelog:https://github.com/pydantic/pydantic/releases.atom
+# changelog:https://github.com/fastapi/sqlmodel/releases.atom
+# changelog:https://github.com/react/react/releases.atom
+# changelog:https://github.com/vitejs/vite/releases.atom
+# changelog:https://github.com/vercel/next.js/releases.atom
+# changelog:https://github.com/microsoft/TypeScript/releases.atom
+# changelog:https://github.com/nodejs/node/releases.atom
+# changelog:https://github.com/tailwindlabs/tailwindcss/releases.atom
+# Python and PostgreSQL publish via git tags (no GitHub "releases"); tags.atom works:
+# changelog:https://github.com/python/cpython/tags.atom
+# changelog:https://github.com/postgres/postgres/tags.atom
+
+# ════════════════ Hacker News — DISABLED (title-only, no summary) ════════════════
+# hn:LLM
+# hn:GPT
+# hn:"language model"
+# hn:"open source AI"

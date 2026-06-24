@@ -1,0 +1,54 @@
+name: daily-digest
+
+# Build the central, pre-summarized news cache once a day with the maintainer's
+# Gemini key (a repo Secret), and publish it to the `dist` branch. Every installed
+# client just pulls dist/news_cache.json from there — no per-user key, hands-off.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"      # 06:00 UTC daily
+  workflow_dispatch: {}       # also run on demand from the Actions tab
+
+permissions:
+  contents: write             # to push the `dist` branch
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build the central news cache
+        env:
+          # Primary summarizer, then free OpenAI-compatible fallbacks. Any of these
+          # that you set as repo Secrets is used (in this order); missing ones are
+          # simply skipped, and with none set pills keep their raw RSS extract.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+        run: |
+          python3 news.py --build-news --out "$RUNNER_TEMP/news_cache.json"
+          test -s "$RUNNER_TEMP/news_cache.json"   # fail if empty
+
+      - name: Publish to the dist branch
+        run: |
+          work="$RUNNER_TEMP/pub"
+          mkdir -p "$work" && cd "$work"
+          cp "$RUNNER_TEMP/news_cache.json" news_cache.json
+          git init -q
+          git checkout -q -b dist
+          git add news_cache.json
+          git -c user.name="meanwhile bot" \
+              -c user.email="github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "daily digest $(date -u +%F)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dist

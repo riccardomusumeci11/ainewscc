@@ -1,0 +1,39 @@
+name: Takedown / removal request
+description: Publishers & rights holders — ask to have a source removed
+labels: ["takedown"]
+title: "Takedown request: <source name>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Meanwhile is a non-commercial, open-source headline aggregator. It shows only
+        a title, a short syndicated RSS extract (or an LLM rewrite of it), the date,
+        and a link back to your article — never the article body. We honor removal
+        requests promptly and in good faith; **no justification is required.**
+  - type: input
+    id: source
+    attributes:
+      label: Source / feed to remove
+      description: The publication name and, if you have it, the feed URL.
+      placeholder: "Example Times — https://example.com/feed.xml"
+    validations:
+      required: true
+  - type: input
+    id: capacity
+    attributes:
+      label: Your relationship to the source
+      placeholder: "e.g. publisher, editor, legal representative, author"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Anything else (optional)
+      description: Specific URLs, scope, or contact details if you'd like a reply.
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand the feed will be removed and the central feed rebuilt, and the source will no longer appear.
+          required: true

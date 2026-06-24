@@ -1,0 +1,23 @@
+name: Feature request / new source
+description: Suggest an improvement, a new primary feed, or a concept
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: The problem you're solving, not just the feature.
+    validations:
+      required: true
+  - type: input
+    id: feed
+    attributes:
+      label: New feed URL (if proposing a source)
+      placeholder: "https://… — must be a PRIMARY/official RSS or Atom feed"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Fits the project
+      options:
+        - label: It keeps the no-dependency, no-key-for-users, legal posture
+        - label: A new source is a primary/official feed (not an aggregator/newsletter)

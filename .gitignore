@@ -1,0 +1,18 @@
+# Generated daily cache and refresh timestamp — never committed.
+data/news_cache.json
+.last_refresh
+
+# Personal / generated state — yours alone, never committed.
+# (Note: .gitignore has no inline comments — keep paths on their own lines.)
+data/saved.txt
+data/srs_state.json
+data/summaries.json
+
+# Installer-generated (created by ./install, removed by ./install --uninstall).
+.install-state.json
+ccnews
+
+# Python / OS noise
+__pycache__/
+*.pyc
+.DS_Store
