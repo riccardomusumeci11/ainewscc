@@ -24,6 +24,7 @@ import subprocess
 import sys
 import termios
 import textwrap
+import threading
 import time
 import tty
 import urllib.error
@@ -1102,6 +1103,11 @@ def cache_age():
 
 
 def is_stale():
+    # A missing/unreadable view cache is always stale, regardless of the stamp:
+    # never trust .last_refresh alone, or a stale stamp with no cache leaves the
+    # panel stuck on the empty state with no refresh attempt.
+    if not os.path.exists(CACHE_FILE):
+        return True
     age = cache_age()
     return age is None or age > REFRESH_EVERY
 
@@ -1203,21 +1209,33 @@ def fetch_and_build_news(verbose=True):
     }
 
 
+PULL_TRIES = 3              # transient-network resilience for the central feed
+PULL_BACKOFF = 2.0          # seconds, grows linearly: 2s, 4s, ...
+
+
 def pull_remote_news(verbose=True):
-    """Download the daily-built central NEWS payload (no key needed). None on fail."""
-    try:
-        raw = http_get(REMOTE_URL, timeout=20)
-        payload = json.loads(raw.decode("utf-8"))
-    except (SkipSource, ValueError, OSError) as e:
-        if verbose:
-            print(f"Could not pull the central feed ({e.__class__.__name__}).",
-                  file=sys.stderr)
-        return None
-    if isinstance(payload, dict) and isinstance(payload.get("clusters"), list):
-        if verbose:
-            print(f"Pulled central digest: {len(payload['clusters'])} clusters "
-                  f"(built {payload.get('generated_date', '?')}).", file=sys.stderr)
-        return payload
+    """Download the daily-built central NEWS payload (no key needed). None on fail.
+    Retries a few times with backoff so a slow link or a transient blip at launch
+    doesn't leave the panel stuck on the empty state."""
+    last = None
+    for attempt in range(1, PULL_TRIES + 1):
+        try:
+            raw = http_get(REMOTE_URL, timeout=30)
+            payload = json.loads(raw.decode("utf-8"))
+            if isinstance(payload, dict) and isinstance(payload.get("clusters"), list):
+                if verbose:
+                    print(f"Pulled central digest: {len(payload['clusters'])} clusters "
+                          f"(built {payload.get('generated_date', '?')}).",
+                          file=sys.stderr)
+                return payload
+            last = "unexpected payload shape"
+        except (SkipSource, ValueError, OSError) as e:
+            last = e.__class__.__name__
+        if attempt < PULL_TRIES:
+            time.sleep(PULL_BACKOFF * attempt)
+    if verbose:
+        print(f"Could not pull the central feed ({last}) after {PULL_TRIES} tries.",
+              file=sys.stderr)
     return None
 
 
@@ -1521,6 +1539,21 @@ def run(clusters, interval):
     old = termios.tcgetattr(fd)
     sys.stdout.write(HIDE_CUR)
     poll_state = cc_state_poller()
+
+    # Self-heal: while the empty state is showing, keep retrying the central pull
+    # in the background and swap real news in the instant it lands — no restart,
+    # no user action. A single failed pull at launch must not kill the session.
+    heal = {"on": bool(clusters and clusters[0].get("_empty")),
+            "busy": False, "ok": False, "next": time.monotonic() + 5}
+
+    def _bg_pull():
+        try:
+            done = refresh(verbose=False)
+        except Exception:        # noqa: BLE001 — never crash the viewer
+            done = False
+        heal["ok"] = bool(done)
+        heal["busy"] = False
+
     try:
         tty.setcbreak(fd)
         total = len(clusters)
@@ -1554,6 +1587,14 @@ def run(clusters, interval):
                     state = new_state               # WORKING<->WAITING transition
                     action = "state"
                     break
+                if heal["on"]:                      # empty state: keep trying to pull
+                    if heal["ok"]:
+                        action = "reload"
+                        break
+                    if not heal["busy"] and time.monotonic() >= heal["next"]:
+                        heal["busy"] = True
+                        heal["next"] = time.monotonic() + 60
+                        threading.Thread(target=_bg_pull, daemon=True).start()
                 if key:
                     action = key
                     break
@@ -1561,6 +1602,16 @@ def run(clusters, interval):
             # ── handle ──
             if action == "quit":
                 break
+            if action == "reload":                  # background pull landed: swap in
+                new = load_cache()
+                nc = [c for c in (new or {}).get("clusters", []) if worth_showing(c)]
+                if nc:
+                    clusters, total = nc, len(nc)
+                    pos, offset, flash = 0, 0, ""
+                    heal["on"] = False
+                else:
+                    heal["ok"] = False              # nothing usable yet; keep retrying
+                continue
             if action == "state":
                 continue                            # redraw at top: ⏸ or resume SAME pill
             if state == "WAITING":
@@ -1596,6 +1647,7 @@ def empty_state_cluster(msg):
         "latest": "",
         "n_sources": 0,
         "kind": "news",
+        "_empty": True,                 # viewer watches this to keep retrying the pull
         "items": [{"title": "", "source": "Meanwhile", "date": "",
                    "extract": msg, "url": "", "kind": "news"}],
         "score": 0,
@@ -1909,8 +1961,9 @@ def main():
     clusters = [c for c in clusters if worth_showing(c)]
     if not clusters:
         clusters = [empty_state_cluster(
-            "No cache and no network. Connect and run ./news --refresh, "
-            "or check data/feeds.txt.")]
+            "Fetching today's digest… this auto-retries every minute, so it will "
+            "appear as soon as the network lets it through. (You can force it with "
+            "./news --refresh.)")]
 
     if not sys.stdin.isatty():
         c = clusters[0]
