@@ -29,9 +29,9 @@ if tmux list-panes -t "$WIN" -F '#{@newsdigest}' 2>/dev/null | grep -qx 1; then
   exit 0
 fi
 
-# Split the CC pane (~38% wide, to the right), don't steal focus; tag it as ours and
+# Split the CC pane (~25% wide, to the right), don't steal focus; tag it as ours and
 # record the owning CC pane for diagnostics.
-NEW="$(tmux split-window -h -d -l 38% -t "$TARGET" -P -F '#{pane_id}' "$DIR/news" 2>>"$STATE_DIR/.tmux_err")"
+NEW="$(tmux split-window -h -d -l 25% -t "$TARGET" -P -F '#{pane_id}' "$DIR/news" 2>>"$STATE_DIR/.tmux_err")"
 if [ -n "${NEW:-}" ]; then
   tmux set-option -p -t "$NEW" @newsdigest 1 2>/dev/null || true
   tmux set-option -p -t "$NEW" @newsdigest_owner "$TARGET" 2>/dev/null || true
