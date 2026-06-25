@@ -7,6 +7,10 @@
 ![Platform](https://img.shields.io/badge/platform-macOS%20%C2%B7%20Linux-lightgrey.svg)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
+<p align="center">
+  <img src="assets/demo.gif" alt="Meanwhile — a news + learning pane splitting in beside Claude Code while it works" width="760">
+</p>
+
 When **Claude Code is busy working**, a news + learning pane **splits in beside it**
 — and disappears the moment it needs you. Instead of rotting in another tab, you
 glance right and **learn or stay current** in 2–3 seconds: today's AI launches, and
