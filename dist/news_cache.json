@@ -1,0 +1,1321 @@
+{
+ "generated_at": 1782294060,
+ "generated_date": "2026-06-24",
+ "n_items": 251,
+ "n_sources_ok": 32,
+ "clusters": [
+  {
+   "headline": "Introducing Web Search on Amazon Bedrock AgentCore",
+   "latest": "2026-06-19",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing Web Search on Amazon Bedrock AgentCore",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-19",
+     "extract": "Web Search on Amazon Bedrock AgentCore is now generally available. In this post, we walk through what makes Web Search on Amazon Bedrock AgentCore different, why it matters, and how to wire it in with a few lines of code.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-agentcore/",
+     "kind": "news"
+    },
+    {
+     "title": "Introducing Search Toolkit",
+     "source": "Mistral AI Blog",
+     "date": "2026-05-28",
+     "extract": "Search Toolkit is a composable framework for building production search pipelines for AI applications.",
+     "note": "",
+     "url": "https://mistral.ai/news/search-toolkit/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8567,
+   "summary": "Web Search on Amazon Bedrock AgentCore is now generally available. This feature allows users to integrate live web search capabilities into their agents. The company has provided documentation detailing the functionality of this tool and instructions for implementation using a few lines of code.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "OpenAI says new GPT-5.5-Cyber outperforms Anthropic's Mythos on cybersecurity benchmark",
+   "latest": "2026-06-23",
+   "n_sources": 3,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI says new GPT-5.5-Cyber outperforms Anthropic's Mythos on cybersecurity benchmark",
+     "source": "The Decoder",
+     "date": "2026-06-23",
+     "extract": "OpenAI is expanding its Daybreak cybersecurity initiative with an updated Codex Security plugin, the full GPT-5.5-Cyber model, and a partner network with more than 25 security firms and several governments. The focus shifts from finding vulnerabilities to patching them automatically.",
+     "note": "",
+     "url": "https://the-decoder.com/openai-says-new-gpt-5-5-cyber-outperforms-anthropics-mythos-on-cybersecurity-benchmark/",
+     "kind": "news"
+    },
+    {
+     "title": "OpenAI launches new initiative to help find and patch open source bugs",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-23",
+     "extract": "OpenAI is using AI to help the open source community better protect itself.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+     "kind": "news"
+    },
+    {
+     "title": "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos",
+     "source": "Feed: Artificial Intelligence Latest",
+     "date": "2026-06-22",
+     "extract": "Amid concerns about AI models’ cybersecurity capabilities, OpenAI revealed an improved version of GPT-5.5-Cyber and its “Patch the Planet” initiative to fix open-source software bugs.",
+     "note": "",
+     "url": "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8423,
+   "summary": "OpenAI has announced that its new GPT-5.5-Cyber model outperforms Anthropic's Mythos on a cybersecurity benchmark. As part of the expanded Daybreak initiative, the company also introduced an updated Codex Security plugin and a partner network comprising more than 25 security firms and several governments. The initiative's operational focus is transitioning from the identification of vulnerabilities to their automatic patching.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Daybreak: Tools for securing every organization in the world",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Daybreak: Tools for securing every organization in the world",
+     "source": "OpenAI News",
+     "date": "2026-06-22",
+     "extract": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
+     "note": "",
+     "url": "https://openai.com/index/daybreak-securing-the-world",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8217,
+   "summary": "OpenAI has launched a suite of Daybreak tools designed to assist organizations in identifying, validating, and patching vulnerabilities at scale. The new offerings include Codex Security and GPT-5.5-Cyber. These tools are intended to provide security coverage for organizations globally.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+     "source": "OpenAI News",
+     "date": "2026-06-22",
+     "extract": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
+     "note": "",
+     "url": "https://openai.com/index/patch-the-planet",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8217,
+   "summary": "OpenAI has launched Patch the Planet, a new Daybreak initiative designed to assist open-source maintainers. This program focuses on helping developers identify, validate, and resolve security vulnerabilities within their projects. The initiative combines the use of AI tools alongside expert human review to secure open-source software.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "New usage analytics and updated spend controls for enterprises",
+   "latest": "2026-06-18",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "New usage analytics and updated spend controls for enterprises",
+     "source": "OpenAI News",
+     "date": "2026-06-18",
+     "extract": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage costs and scale AI with confidence.",
+     "note": "",
+     "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
+     "kind": "news"
+    }
+   ],
+   "score": 0.795,
+   "summary": "OpenAI has launched new usage analytics and updated spend controls for ChatGPT Enterprise. These tools are designed to assist organizations in managing their costs. The features aim to help businesses scale their use of AI technology.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Introducing LifeSciBench",
+   "latest": "2026-06-17",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing LifeSciBench",
+     "source": "OpenAI News",
+     "date": "2026-06-17",
+     "extract": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+     "note": "",
+     "url": "https://openai.com/index/introducing-life-sci-bench",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7883,
+   "summary": "LifeSciBench has been introduced as a new benchmark designed to evaluate how AI systems perform on real-world life science research tasks and decision-making. The benchmark was authored and reviewed by experts in the field. It aims to provide a standardized method for assessing the capabilities of AI models within the life sciences domain.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
+   "latest": "2026-06-23",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
+     "source": "NVIDIA Blog",
+     "date": "2026-06-23",
+     "extract": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
+     "kind": "news"
+    },
+    {
+     "title": "How Together AI built the world’s fastest speech-to-text stack",
+     "source": "Together.ai",
+     "date": "2026-05-29",
+     "extract": "Together AI built the fastest speech-to-text stack on Artificial Analysis by treating ASR as a full-path systems problem, not just a GPU inference problem.",
+     "note": "",
+     "url": "https://www.together.ai/blog/how-together-ai-built-the-worlds-fastest-speech-to-text-stack",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7633,
+   "summary": "NVIDIA technologies now power more than 400 of the world’s 500 fastest supercomputers. This figure represents 81% of the total systems listed on the TOP500. The latest rankings were released this week at the ISC High Performance conference held in Hamburg, Germany.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Mistral's new OCR model beats competitors in 72 percent of blind test cases, company says",
+   "latest": "2026-06-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Mistral's new OCR model beats competitors in 72 percent of blind test cases, company says",
+     "source": "The Decoder",
+     "date": "2026-06-24",
+     "extract": "Mistral AI has released OCR 4, a new model that reads text from documents like PDFs, Word files, and PowerPoint presentations.",
+     "note": "",
+     "url": "https://the-decoder.com/mistrals-new-ocr-model-beats-competitors-in-72-percent-of-blind-test-cases-company-says/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.739,
+   "summary": "Mistral AI has launched OCR 4, a new model designed to extract text from PDFs, Word files, and PowerPoint presentations. According to the company, this model outperforms competitors in 72 percent of blind test cases.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "ByteDance's Seedance 2.5 breaks the 30-second barrier for AI video generation",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "ByteDance's Seedance 2.5 breaks the 30-second barrier for AI video generation",
+     "source": "The Decoder",
+     "date": "2026-06-23",
+     "extract": "ByteDance introduced five new AI models at Volcano Engine's FORCE conference. The centerpiece is Seedance 2.5, a video model set to launch in early July.",
+     "note": "",
+     "url": "https://the-decoder.com/bytedances-seedance-2-5-breaks-the-30-second-barrier-for-ai-video-generation/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "ByteDance has unveiled Seedance 2.5, an AI video model capable of generating content in under 30 seconds. The company introduced this model alongside four others during the Volcano Engine FORCE conference. Seedance 2.5 is scheduled for an official launch in early July.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Sakana AI's Fugu orchestrates multiple LLMs to match Anthropic's Fable and Mythos benchmarks",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Sakana AI's Fugu orchestrates multiple LLMs to match Anthropic's Fable and Mythos benchmarks",
+     "source": "The Decoder",
+     "date": "2026-06-23",
+     "extract": "Japanese AI startup Sakana AI is launching Fugu, a system that coordinates multiple AI models on the fly to compete with leaders like Anthropic's Fable 5. The approach also aims to cut dependence on any single AI provider.",
+     "note": "",
+     "url": "https://the-decoder.com/sakana-ais-fugu-orchestrates-multiple-llms-to-match-anthropics-fable-and-mythos-benchmarks/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "Japanese startup Sakana AI has launched Fugu, a new system designed to coordinate multiple AI models in real time. This orchestration approach allows the platform to compete with benchmarks set by Anthropic’s Fable and Mythos models. By utilizing this multi-model architecture, Sakana AI aims to reduce reliance on any individual AI provider.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The running list: major tech layoffs in 2026 where employers cited AI",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The running list: major tech layoffs in 2026 where employers cited AI",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-23",
+     "extract": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "Major tech companies are actively documenting significant workforce reductions in 2026 that explicitly cite artificial intelligence as a contributing factor. This running list tracks these corporate layoffs in reverse chronological order. The record serves as a centralized reference for identifying which large technology firms have attributed personnel cuts to AI adoption throughout the year.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Google makes Interactions API the default interface for Gemini models and agents",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Google makes Interactions API the default interface for Gemini models and agents",
+     "source": "The Decoder",
+     "date": "2026-06-22",
+     "extract": "Google Deepmind has made the Interactions API the default interface for Gemini models and agents. It replaces the old generateContent API and uses a simplified schema with typed steps instead of role-based structures. New agent features will only ship through this API going forward.",
+     "note": "",
+     "url": "https://the-decoder.com/google-makes-interactions-api-the-default-interface-for-gemini-models-and-agents/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7257,
+   "summary": "Google DeepMind has transitioned the Interactions API to become the default interface for all Gemini models and agents. This new system replaces the previous generateContent API by utilizing a simplified schema that incorporates typed steps rather than role-based structures. Future agent features will be released exclusively through this updated API.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Nvidia wants to cut data center water use, but that’s not the same as fixing AI’s water problem",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Nvidia wants to cut data center water use, but that’s not the same as fixing AI’s water problem",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-22",
+     "extract": "Nvidia announced a new cooling system that cuts water use inside the data center. But it does nothing to address AI's biggest water use — fossil fuel power plants.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7257,
+   "summary": "Nvidia has introduced a new cooling system designed to reduce water consumption within its data centers. While this technology lowers internal water usage, it does not address the significant water consumption associated with the fossil fuel power plants that supply electricity to AI operations. Consequently, the company's new hardware does not resolve the broader water usage issues linked to the AI industry.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "From Materials Simulation to Experimental Astronomy, New NVIDIA AI Software Unlocks Scientific Discoveries",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "From Materials Simulation to Experimental Astronomy, New NVIDIA AI Software Unlocks Scientific Discoveries",
+     "source": "NVIDIA Blog",
+     "date": "2026-06-22",
+     "extract": "At the ISC conference running in Hamburg this week, NVIDIA is introducing new software that speeds AI for science, from chemistry and materials discovery to the search for dark matter. The NVIDIA DAQIRI library and new NVIDIA ALCHEMI NIM microservices — as well as the NVIDIA cuPhoton reference code, coming soon — turn work that",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/ai-for-science-software-cuda/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7017,
+   "summary": "NVIDIA is introducing new software designed to accelerate scientific AI research at the ISC conference in Hamburg this week. The release includes the NVIDIA DAQIRI library and new NVIDIA ALCHEMI NIM microservices, which support fields ranging from chemistry and materials discovery to the search for dark matter. Additionally, the company announced that the NVIDIA cuPhoton reference code will be available soon. These tools aim to speed up computational work across various scientific disciplines.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Amazon SageMaker AI Async Inference now supports inline request payloads",
+   "latest": "2026-06-17",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Amazon SageMaker AI Async Inference now supports inline request payloads",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-17",
+     "extract": "Today, we’re announcing inline payload support for Amazon SageMaker AI Async Inference. Customers can now send inference payloads directly in the request body of the InvokeEndpointAsync API, removing the need to upload input data to Amazon Simple Storage Service (Amazon S3) before each invocation.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-async-inference-now-supports-inline-request-payloads/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6683,
+   "summary": "Amazon SageMaker AI Async Inference now supports inline request payloads. Users can transmit inference data directly within the InvokeEndpointAsync API request body. This update eliminates the previous requirement to upload input files to Amazon Simple Storage Service (Amazon S3) prior to each invocation.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Context intelligence for your data and AI agents at scale",
+   "latest": "2026-06-17",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Context intelligence for your data and AI agents at scale",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-17",
+     "extract": "Agents are only as intelligent as the context they can reason over. Today, that context is scattered across data lakes, data warehouses, lakehouses, databases, and streams, and in institutional knowledge that has never been written down. You want to trust the decisions made by your AI agents, but that can't happen until agents have context. Imagine what becomes possible when we give agents a safe way to access the context they need to deliver trusted decisions. This is why at the AWS Summit New York City, we’re announcing a series of innovations that deliver intelligence for your data and AI agents at scale.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/context-intelligence-for-your-data-and-ai-agents-at-scale/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6683,
+   "summary": "At the AWS Summit in New York City, Amazon Web Services announced a series of innovations designed to provide intelligence for data and AI agents at scale. The company aims to address the challenge of scattered data across lakes, warehouses, databases, and streams, as well as unrecorded institutional knowledge. By providing agents with a secure method to access this necessary context, AWS intends to enable more trusted decision-making capabilities.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Vibe gets to work.",
+   "latest": "2026-05-28",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Vibe gets to work.",
+     "source": "Mistral AI Blog",
+     "date": "2026-05-28",
+     "extract": "The unified agent for long-horizon productivity and coding, launching with Work and Code modes. Plus, a new Vibe VS Code extension.",
+     "note": "",
+     "url": "https://mistral.ai/news/vibe-agent/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.655,
+   "summary": "Vibe has launched as a unified agent designed for long-horizon productivity and coding tasks. The platform features two distinct operational settings known as Work and Code modes. Additionally, the release includes a new Vibe extension for the VS Code editor.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Introducing physics AI at Mistral: the foundation for engineering acceleration.",
+   "latest": "2026-05-27",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing physics AI at Mistral: the foundation for engineering acceleration.",
+     "source": "Mistral AI Blog",
+     "date": "2026-05-27",
+     "extract": "A new class of AI models that predict the behavior of physical systems, powering the engineers and hardware products of tomorrow.",
+     "note": "",
+     "url": "https://mistral.ai/news/introducing-physics-ai-at-mistral/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6483,
+   "summary": "Mistral has introduced a new class of physics AI models designed to predict the behavior of physical systems. These models serve as a foundation for accelerating engineering processes. The technology is intended to support the development of future hardware products and the engineers who create them.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The Classical Advances Needed to Make Quantum Computers Tick",
+   "latest": "2026-06-03",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The Classical Advances Needed to Make Quantum Computers Tick",
+     "source": "IEEE Spectrum",
+     "date": "2026-06-03",
+     "extract": "Quantum computers promise to one day solve problems beyond the most powerful supercomputers imaginable. But it’s often underappreciated how much classical computing it takes just to operate these machines. As qubit counts rise, innovations in this supporting infrastructure will be essential if they’re to live up to their promise. To prepare for the scale of quantum computers the industry is working toward, many companies are also gearing up the classical hardware, and software, required to support them. In April, Nvidia announced new AI-based software to accelerate the classical tasks that enable quantum computers.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/quantum-calibration-decoding",
+     "kind": "news"
+    }
+   ],
+   "score": 0.575,
+   "summary": "Nvidia announced new AI-based software in April designed to accelerate the classical computing tasks required to operate quantum computers. While quantum machines aim to solve problems beyond the reach of current supercomputers, they rely heavily on classical infrastructure to function. As qubit counts increase, companies are actively developing the necessary classical hardware and software to support the scaling of these systems. This initiative addresses the underappreciated demand for classical processing power needed to make quantum technology viable.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
+   "latest": "2026-05-19",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
+     "source": "AI",
+     "date": "2026-05-19",
+     "extract": "For a quarter century, the Google search box has been one of the most recognizable interfaces in computing: a thin white rectangle, a blinking cursor, a few typed words, and a list of blue links. On Tuesday, Google will formally retire that paradigm. At its annual I/O developer conference , Google announced a sweeping redesign of the search box itself — the literal text field where billions of queries begin every day — transforming it from a simple keyword input into a dynamic, AI-driven conversation starter that can accept text, images, PDFs, videos, and even open Chrome tabs as inputs.",
+     "note": "",
+     "url": "https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think",
+     "kind": "news"
+    }
+   ],
+   "score": 0.539,
+   "summary": "Google is officially redesigning its search box for the first time in 25 years, moving away from the traditional text-only input field. Announced Tuesday at the annual I/O developer conference, the new interface functions as an AI-driven conversation starter rather than a simple keyword tool. Users can now utilize text, images, PDFs, videos, and open Chrome tabs as inputs for their queries. This change formally retires the long-standing paradigm of a thin white rectangle that produces a list of blue links.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Data Formulator 0.7: AI-powered data analytics for enterprise data",
+   "latest": "2026-05-28",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Data Formulator 0.7: AI-powered data analytics for enterprise data",
+     "source": "Microsoft Research",
+     "date": "2026-05-28",
+     "extract": "Data Formulator introduces AI-powered analytics for enterprise data workflows. Data teams can easily bring enterprise data into an AI-ready workspace where users can explore, analyze, and visualize data with AI agents to turn raw data into actionable insights.",
+     "note": "",
+     "url": "https://www.microsoft.com/en-us/research/blog/data-formulator-0-7-ai-powered-data-analytics-for-enterprise-data/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.535,
+   "summary": "Data Formulator 0.7 has launched to provide AI-powered data analytics specifically designed for enterprise data workflows. The platform offers an AI-ready workspace where data teams can import enterprise information for exploration, analysis, and visualization. Users leverage AI agents within this environment to transform raw data into actionable insights.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Together AI and Pearl Research Labs Team Up to Reduce the Cost of AI Inference",
+   "latest": "2026-05-15",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Together AI and Pearl Research Labs Team Up to Reduce the Cost of AI Inference",
+     "source": "Together.ai",
+     "date": "2026-05-15",
+     "extract": "Together AI partners with Pearl Research Labs to launch a discounted Pearl-powered inference endpoint for Gemma-4-31B-it-pearl, using Proof of Useful Work to turn AI workloads into crypto emissions.",
+     "note": "",
+     "url": "https://www.together.ai/blog/together-ai-partners-with-pearl-research-labs",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "Together AI has partnered with Pearl Research Labs to lower the cost of AI inference by launching a discounted endpoint. This new service features the Gemma-4-31B-it-pearl model, which is powered by Pearl Research Labs' technology. The integration utilizes Proof of Useful Work to convert AI workloads into crypto emissions.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "GridSFM: A new, small foundation model for the electric grid",
+   "latest": "2026-05-13",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "GridSFM: A new, small foundation model for the electric grid",
+     "source": "Microsoft Research",
+     "date": "2026-05-13",
+     "extract": "Introducing GridSFM, a small foundation model that can predict AC optimal power flow in milliseconds, boosting efficiency and unlocking cost savings. Learn how GridSFM gives grid operators direct visibility into congestion, stability, and system health.",
+     "note": "",
+     "url": "https://www.microsoft.com/en-us/research/blog/gridsfm-a-new-small-foundation-model-for-the-electric-grid/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "GridSFM is a new, small foundation model designed to predict AC optimal power flow in milliseconds. By providing grid operators with direct visibility into system health, stability, and congestion, the model aims to increase efficiency and generate cost savings. This tool functions as a foundation model specifically tailored for the electric grid.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Introducing voice finder — a new tool to quickly find the right voice for your app from over 600+ voices",
+   "latest": "2026-05-12",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing voice finder — a new tool to quickly find the right voice for your app from over 600+ voices",
+     "source": "Together.ai",
+     "date": "2026-05-12",
+     "extract": "Voice finder helps developers search, match, filter, and audition 600+ voices across Together AI TTS models using natural-language prompts or uploaded audio samples.",
+     "note": "",
+     "url": "https://www.together.ai/blog/introducing-voice-finder-a-new-tool-to-quickly-find-the-right-voice-for-your-app-from-over-600-voices",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "Together AI has launched Voice finder, a tool designed to help developers locate the ideal voice for their applications from a library of over 600 options. Users can search, filter, match, and audition these voices across the company's text-to-speech models. The platform supports discovery through either natural-language prompts or the submission of uploaded audio samples.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Claude Tag embeds Anthropic's AI in Slack, already writes 65 percent of internal code, company says",
+   "latest": "2026-06-24",
+   "n_sources": 3,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Claude Tag embeds Anthropic's AI in Slack, already writes 65 percent of internal code, company says",
+     "source": "The Decoder",
+     "date": "2026-06-24",
+     "extract": "Claude Tag lets teams bring Anthropic's AI into Slack by tagging @Claude in any channel and assigning it tasks. Internally, the tool already generates 65 percent of the code on Anthropic's product team, the company says.",
+     "note": "",
+     "url": "https://the-decoder.com/claude-tag-embeds-anthropics-ai-in-slack-already-writes-65-percent-of-internal-code-company-says/",
+     "kind": "news"
+    },
+    {
+     "title": "Anthropic’s Claude Tag is learning your company, one Slack message at a time",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-23",
+     "extract": "Anthropic’s new Claude Tag brings an always-on AI teammate to Slack. But beyond productivity, the feature is a strategic play to capture organizational context, institutional knowledge, and enterprise workflows.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+     "kind": "news"
+    },
+    {
+     "title": "Anthropic reimagines Claude in Slack as nosy, always-on agentic AI coworker",
+     "source": "www.theregister.com",
+     "date": "2026-06-23",
+     "extract": "The Claude in Slack app is dead, long live Claude in Slack",
+     "note": "",
+     "url": "https://www.theregister.com/ai-and-ml/2026/06/23/anthropic-reimagines-claude-in-slack-as-nosy-always-on-agentic-ai-coworker/5260422",
+     "kind": "news"
+    }
+   ],
+   "score": 0.509,
+   "summary": "Anthropic has introduced Claude Tag, a new feature that allows teams to integrate its AI directly into Slack channels by tagging @Claude to assign tasks. According to the company, this internal tool is already responsible for writing 65 percent of the code produced by its own product team.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Helping build shared standards for advanced AI",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Helping build shared standards for advanced AI",
+     "source": "OpenAI News",
+     "date": "2026-06-23",
+     "extract": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
+     "note": "",
+     "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4883,
+   "summary": "OpenAI is contributing to the development of shared standards for advanced artificial intelligence by partnering with the Appia Foundation. This collaboration focuses on establishing evaluation frameworks, implementing safety practices, and fostering global cooperation within the industry. Through this initiative, the company aims to support the creation of unified benchmarks and protocols for AI development.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+     "source": "OpenAI News",
+     "date": "2026-06-23",
+     "extract": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
+     "note": "",
+     "url": "https://openai.com/index/gpt-5-immunology-mystery",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4883,
+   "summary": "Immunologist Derya Unutmaz utilized GPT-5 Pro to resolve a three-year-old mystery regarding T cell behavior. This technological breakthrough provides new insights that may assist in future cancer and autoimmune research.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Codex-maxxing for long-running work",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Codex-maxxing for long-running work",
+     "source": "OpenAI News",
+     "date": "2026-06-22",
+     "extract": "Learn how Jason Liu uses Codex to preserve context, manage complex projects, and help work continue beyond a single prompt.",
+     "note": "",
+     "url": "https://openai.com/index/codex-maxxing-long-running-work",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "Jason Liu is utilizing Codex to maintain context and manage complex projects that extend beyond the constraints of a single prompt. This approach, described as \"Codex-maxxing,\" allows for the preservation of information across long-running work sessions. By employing these techniques, Liu enables tasks to continue effectively over multiple interactions.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Improving health intelligence in ChatGPT",
+   "latest": "2026-06-18",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Improving health intelligence in ChatGPT",
+     "source": "OpenAI News",
+     "date": "2026-06-18",
+     "extract": "Learn how GPT-5.5 Instant improves ChatGPT’s health and wellness responses with stronger reasoning, better context, clearer communication, and physician-informed evaluations.",
+     "note": "",
+     "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
+     "kind": "news"
+    }
+   ],
+   "score": 0.455,
+   "summary": "GPT-5.5 Instant has been released to enhance the health and wellness responses provided by ChatGPT. This update incorporates physician-informed evaluations to improve the accuracy of medical information. The model also features stronger reasoning capabilities, improved context management, and clearer communication for users.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+   "latest": "2026-06-18",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+     "source": "OpenAI News",
+     "date": "2026-06-18",
+     "extract": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
+     "note": "",
+     "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
+     "kind": "news"
+    }
+   ],
+   "score": 0.455,
+   "summary": "Researchers utilized an OpenAI reasoning model to assist physicians in diagnosing rare genetic conditions in children. This application of artificial intelligence successfully identified 18 new diagnoses within cases that had previously remained unsolved.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+   "latest": "2026-06-17",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+     "source": "OpenAI News",
+     "date": "2026-06-17",
+     "extract": "OpenAI and Molecule.one show how a near-autonomous AI chemist using GPT-5.4 improved a key drug-making reaction, advancing medicinal chemistry research.",
+     "note": "",
+     "url": "https://openai.com/index/ai-chemist-improves-reaction",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4483,
+   "summary": "OpenAI and Molecule.one have developed a near-autonomous AI chemist that successfully improved a complex reaction used in medicinal chemistry. The project utilized the GPT-5.4 model to advance research in the field of drug manufacturing. This collaboration demonstrates the capability of the AI system to perform specific tasks within the drug-making process.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The AI world is getting ‘loopy’",
+   "latest": "2026-06-22",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The AI world is getting ‘loopy’",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-22",
+     "extract": "The loop takes agentic AI a step further by authorizing a swarm of agents to work continuously in the background, endlessly.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/",
+     "kind": "news"
+    },
+    {
+     "title": "World Cup Scams Are Getting Harder to Spot",
+     "source": "Feed: Artificial Intelligence Latest",
+     "date": "2026-06-22",
+     "extract": "From fake tickets to cloned websites, AI is magnifying World Cup scams. Can fans distinguish between what’s real and what’s not?",
+     "note": "",
+     "url": "https://www.wired.com/story/world-cup-scams-are-getting-harder-to-spot/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4407,
+   "summary": "Agentic AI is evolving into a \"loopy\" model that enables swarms of agents to operate continuously in the background. This new approach allows these systems to function endlessly without manual intervention. By authorizing these swarms, the technology takes agentic AI a step further than previous iterations.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "IEEE Rolls Out Large Language Models Virtual Training Course",
+   "latest": "2026-06-19",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": true,
+   "items": [
+    {
+     "title": "IEEE Rolls Out Large Language Models Virtual Training Course",
+     "source": "IEEE Spectrum",
+     "date": "2026-06-19",
+     "extract": "Large language models have moved out of the research lab and into engineers’ daily workflow. LLMs serve as reasoning engines that can orchestrate complex tasks including identifying vulnerabilities in source code and transforming fragmented project discussions into rigorous technical specifications. While the general public uses AI tools to write email and plan vacations, technical professionals use LLMs as core architectural elements that are fundamentally changing how digital infrastructures are built and maintained. As the AI models move into mainstream engineering practice, the demand for technical expertise is rising.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/large-language-models-ieee-course",
+     "kind": "news"
+    }
+   ],
+   "score": 0.409,
+   "summary": "The IEEE has launched a virtual training course focused on large language models to address the growing demand for technical expertise as these tools become standard in engineering workflows. These models now function as reasoning engines capable of identifying source code vulnerabilities and converting project discussions into technical specifications. By integrating LLMs as core architectural elements, technical professionals are fundamentally altering the construction and maintenance of digital infrastructures. This program aims to support engineers as they transition these advanced models from research environments into daily professional practice.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Less is More: Quality-Aware Training Data Selection for Scientific Summarization",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.2,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": true,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Less is More: Quality-Aware Training Data Selection for Scientific Summarization",
+     "source": "arXiv cs.CL",
+     "date": "2026-06-23",
+     "extract": "Scientific long-document summarization datasets commonly treat author-written abstracts as gold reference summaries, although their quality and alignment with the source article vary. At the same time, publicly available scientific summarization datasets remain limited in scale and structure for modern long-context models. In this work, we address both challenges by a) constructing and releasing one of the largest biomedical and life science datasets for long-document summarization, containing 1.88 million PMC articles, and b) analyzing the reference quality of author-written abstracts with source-grounded and model-based metrics.",
+     "note": "",
+     "url": "http://arxiv.org/abs/2606.24828v1",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4,
+   "summary": "Researchers have released a new biomedical and life science dataset for long-document summarization that includes 1.88 million articles from PMC. This project addresses the limitations of existing datasets by providing a larger, more structured resource for training modern long-context models. To improve data quality, the team evaluated the alignment of author-written abstracts with their source articles using both model-based and source-grounded metrics. This work aims to resolve issues regarding the inconsistent quality of reference summaries typically used in scientific summarization tasks.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through a Golden Set Approach",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.2,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": true,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through a Golden Set Approach",
+     "source": "arXiv cs.CL",
+     "date": "2026-06-23",
+     "extract": "The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscape demand robust and specialized methods for structured information extraction. Traditional approaches to Product Attribute Value Extraction (PAVE) often struggle with the linguistic nuances and sheer diversity of product descriptions in Portuguese. To address this critical gap, this paper introduces two major contributions. First, we present AI-PAVEBr, a specialized system engineered with Large Language Models (LLMs) to perform high-accuracy PAVE specifically for Brazilian e-commerce catalogs.",
+     "note": "",
+     "url": "http://arxiv.org/abs/2606.24655v1",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4,
+   "summary": "The AI-PAVE-Br system has been introduced to improve product attribute value extraction within the Brazilian e-commerce sector. This specialized tool utilizes large language models to address the linguistic complexities and diversity found in Portuguese-language product descriptions. By implementing a golden set approach, the system aims to provide more robust and accurate structured information extraction for regional online catalogs.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Difference-Making without Making a Difference",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.2,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": true,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Difference-Making without Making a Difference",
+     "source": "arXiv cs.AI",
+     "date": "2026-06-23",
+     "extract": "Over a series of seven papers, Andreas & Günther have introduced seven definitions of actual causation and have classified them as belonging to three different, competing, types of accounts: factual difference-making, counterfactual difference-making, and regularity-based. I show that their most recent - factual difference-making - definition instantiates all three types, thereby proving that these are distinctions without a difference. I further compare their novel account to the other six accounts on several crucial examples, revealing that this undermines all seven of their accounts.",
+     "note": "",
+     "url": "http://arxiv.org/abs/2606.24832v1",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4,
+   "summary": "Researchers Andreas and Günther have published seven papers introducing seven distinct definitions of actual causation, which they categorize into factual difference-making, counterfactual difference-making, and regularity-based accounts. A new analysis demonstrates that their latest factual difference-making definition incorporates all three of these categories, rendering the distinctions between them invalid. Furthermore, comparing this novel account against the previous six definitions across several key examples reveals that the new framework undermines the validity of all seven proposed accounts.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Fluid, natural voice translation with Gemini 3.5 Live Translate",
+   "latest": "2026-06-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Fluid, natural voice translation with Gemini 3.5 Live Translate",
+     "source": "Google DeepMind News",
+     "date": "2026-06-09",
+     "extract": "Gemini 3.5 Live Translate brings near real-time, natural speech translation to Google AI Studio, Google Translate and Google Meet.",
+     "note": "",
+     "url": "https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.395,
+   "summary": "Google has introduced Gemini 3.5 Live Translate, a feature designed to provide near real-time, natural speech translation. This capability is now available across Google AI Studio, Google Translate, and Google Meet. The tool aims to facilitate seamless communication by processing spoken language with high fluidity.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-23",
+     "extract": "Stockholm-based startup Fika Jobs is building a video-first hiring platform that combines AI interview agents with short-form video profiles, creating something that feels like a cross between LinkedIn and TikTok.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "Stockholm-based startup Fika Jobs has secured $4 million in funding to develop a video-first hiring platform. The company integrates AI interview agents with short-form video profiles to facilitate the recruitment process. This platform is designed to function as a hybrid between LinkedIn and TikTok.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Sharing a love for calculus",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Sharing a love for calculus",
+     "source": "MIT Technology Review",
+     "date": "2026-06-23",
+     "extract": "The national conversation about the value of education is currently dominated by speculation about the risks and positive potential of AI. Whatever your own perspective on that debate, I hope you’ll be glad to know that MIT is also working on a deeply important but comparatively old-fashioned challenge: American high school students’ startlingly uneven access…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/06/23/1138271/sharing-a-love-for-calculus/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "MIT is addressing the issue of uneven access to calculus education for American high school students. While the national discourse currently focuses on the risks and benefits of artificial intelligence, the university is prioritizing this traditional academic challenge. The initiative aims to improve educational equity by focusing on a subject that remains a fundamental component of the high school curriculum.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Hollywood is bending the knee to OpenAI",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Hollywood is bending the knee to OpenAI",
+     "source": "The Verge",
+     "date": "2026-06-23",
+     "extract": "Netflix, A24, Focus Features, and Warner Bros.' Clockwork have all reportedly decided to pass on picking up Artificial - director Luca Guadagnino's new biographical drama about OpenAI cofounder / CEO Sam Altman - for distribution deals. And while Neon and Mubi are still said to be interested in the film, this situation makes it seem",
+     "note": "",
+     "url": "https://www.theverge.com/entertainment/954899/luca-guadagnino-artificial-sam-altman-amazon-a24-neon-mubi-chatgpt",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "Netflix, A24, Focus Features, and Warner Bros.' Clockwork have declined to distribute *Artificial*, a biographical drama about OpenAI cofounder and CEO Sam Altman directed by Luca Guadagnino. While these major studios have passed on the project, Neon and Mubi reportedly remain interested in the film. The situation highlights a reluctance among several prominent distributors to pick up the production.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Measuring the impact of learning with AI in Sierra Leone and beyond",
+   "latest": "2026-06-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Measuring the impact of learning with AI in Sierra Leone and beyond",
+     "source": "Google DeepMind News",
+     "date": "2026-06-08",
+     "extract": "Results from a randomized controlled trial show the potential of Gemini’s Guided Learning feature to boost engagement and accelerate learning.",
+     "note": "",
+     "url": "https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3883,
+   "summary": "A randomized controlled trial indicates that the Guided Learning feature in Google’s Gemini can increase student engagement and speed up the learning process. This study measured the impact of the AI tool within Sierra Leone and other regions. The findings highlight the specific educational benefits of integrating this feature into learning environments.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Anthropic and Micron want to co-design AI memory architecture",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Anthropic and Micron want to co-design AI memory architecture",
+     "source": "The Decoder",
+     "date": "2026-06-22",
+     "extract": "Micron is investing in Anthropic's Series H round and getting a multi-year deal to supply memory for Claude's infrastructure. Anthropic co-founder Tom Brown calls memory critical to training and running Claude. Critics say circular deals like this are inflating a bubble. Micron's stock has surged more than tenfold in a single year.",
+     "note": "",
+     "url": "https://the-decoder.com/anthropic-and-micron-want-to-co-design-ai-memory-architecture/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Anthropic and Micron have announced a partnership to co-design memory architecture for AI systems. As part of this collaboration, Micron is investing in Anthropic’s Series H funding round and has secured a multi-year agreement to supply memory hardware for the infrastructure supporting the Claude AI model. Anthropic co-founder Tom Brown identified memory as a critical component for both training and operating Claude. While Micron’s stock has increased more than tenfold over the past year, some critics have raised concerns that these types of circular business deals are contributing to an industry bubble.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Microsoft is building a 2-gigawatt data center in Texas with its own gas plant to dodge the grid",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Microsoft is building a 2-gigawatt data center in Texas with its own gas plant to dodge the grid",
+     "source": "The Decoder",
+     "date": "2026-06-22",
+     "extract": "Microsoft is building a roughly 2-gigawatt data center campus in Pecos, Texas, one of the biggest single capacity adds in its history. In an open letter, the company promises stable power prices and minimal water use, directly addressing the local backlash that has killed dozens of data center projects across the US.",
+     "note": "",
+     "url": "https://the-decoder.com/microsoft-is-building-a-2-gigawatt-data-center-in-texas-with-its-own-gas-plant-to-dodge-the-grid/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Microsoft is constructing a data center campus in Pecos, Texas, that will feature approximately 2 gigawatts of capacity, marking one of the largest single additions in the company's history. To bypass the local power grid, the facility will be supported by its own dedicated natural gas plant. In an open letter, Microsoft committed to providing stable electricity pricing and minimal water consumption. These measures are intended to mitigate local opposition that has previously halted dozens of data center developments throughout the United States.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "AI chipmaker Groq confirms $650M raise, re-staffs after Nvidia’s $20B not-acqui-hire deal",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "AI chipmaker Groq confirms $650M raise, re-staffs after Nvidia’s $20B not-acqui-hire deal",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-22",
+     "extract": "What does an AI company do after one of those not-acqui-hire deals? Groq raised money, is leaning into its neocloud business, and is hiring new execs.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Groq has secured $650 million in new funding following the collapse of a potential $20 billion acquisition deal by Nvidia. The AI chipmaker is now shifting its strategic focus toward its neocloud business operations. To support this transition, the company is actively recruiting new executives to join its leadership team.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Amazon is testing Alexa+ in India with Hindi support",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Amazon is testing Alexa+ in India with Hindi support",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-22",
+     "extract": "Amazon is planning to increase the footprint of its new conversational AI assistant Alexa+ to India and is inviting users in the country to test out a Hindi-language version.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Amazon is expanding the reach of its new conversational AI assistant, Alexa+, by launching a testing phase in India. The company is currently inviting users within the country to participate in trials for a Hindi-language version of the service. This initiative marks the latest effort to increase the footprint of the AI assistant in the region.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
+   "latest": "2026-06-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
+     "source": "NVIDIA Blog",
+     "date": "2026-06-24",
+     "extract": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.375,
+   "summary": "NVIDIA and AWS are collaborating to help enterprises deploy AI systems at scale by addressing demands for low-latency inference, fast vector search, and GPU price-performance. This partnership integrates NVIDIA AI infrastructure across Amazon OpenSearch and Amazon EC2. The initiative aims to provide businesses with practical deployment paths that allow infrastructure to grow without increasing operational complexity.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "How Businesses Are Building Specialized AI They Can Trust",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "How Businesses Are Building Specialized AI They Can Trust",
+     "source": "NVIDIA Blog",
+     "date": "2026-06-23",
+     "extract": "Companies are asking how to build specialized AI that fits with the way their workflows actually run. The first wave of enterprise AI was about access. Companies experimented with new frontier and open models, ran pilots and explored how AI can help. Now, specialized agents — systems of models that can reason, use tools and",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/nvidia-agent-toolkit-open-models-tools-skills-secure-runtime-ai-agents/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "Businesses are currently shifting their focus toward building specialized AI systems that integrate directly into their existing operational workflows. While the initial phase of enterprise AI centered on experimenting with frontier and open models through pilot programs, the current trend involves developing specialized agents. These new systems are designed to function as networks of models capable of reasoning and utilizing specific tools.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Build a protein research copilot with Amazon Bedrock AgentCore",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Build a protein research copilot with Amazon Bedrock AgentCore",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-23",
+     "extract": "This post shows you how to build a conversational protein research assistant that combines three capabilities: Natural language query parsing to extract structured search parameters, vector similarity search over protein embeddings using a specialized language model and ai-generated scientific summaries of search results.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/build-a-protein-research-copilot-with-amazon-bedrock-agentcore/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "Amazon Bedrock AgentCore can now be used to develop a conversational protein research assistant. This tool integrates three distinct functions: parsing natural language queries into structured search parameters, performing vector similarity searches on protein embeddings via a specialized language model, and generating scientific summaries of the retrieved results.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-23",
+     "extract": "In this post, you will learn patterns for implementing production-ready multi-tenant systems using Amazon Bedrock AgentCore. You will see these patterns demonstrated through healthcare AI agents that serve multiple clinics and hospitals.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "Amazon Bedrock AgentCore now supports pool model multi-tenancy to enable shared infrastructure for isolated tenants. This approach allows developers to implement production-ready systems that serve multiple clinics and hospitals simultaneously. The provided patterns demonstrate how to effectively manage these healthcare AI agents within a multi-tenant architecture.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Exploring the societal impacts of AI",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Exploring the societal impacts of AI",
+     "source": "MIT News",
+     "date": "2026-06-23",
+     "extract": "During the AI and Society Forum, leading MIT researchers examined critical questions about AI’s influence on employment and democracy.",
+     "note": "",
+     "url": "https://news.mit.edu/2026/exploring-societal-impacts-of-ai-0623",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "Leading MIT researchers investigated the societal impacts of artificial intelligence during the AI and Society Forum. The experts focused on analyzing critical questions regarding how AI influences both democracy and employment.",
+   "summary_src": "gemini"
+  }
+ ]
+}

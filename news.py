@@ -1259,11 +1259,36 @@ def build_view_cache(news_payload, verbose=True):
     return True
 
 
+def load_bundled_seed(verbose=True):
+    """The NEWS payload shipped in the repo (dist/news_cache.json). Used as an
+    offline-safe fallback so the very first paint has content even when the central
+    feed is unreachable (blocked host, no network). None if absent/unreadable."""
+    try:
+        with open(DIST_FILE, encoding="utf-8") as f:
+            payload = json.load(f)
+    except (FileNotFoundError, ValueError, OSError):
+        return None
+    if isinstance(payload, dict) and isinstance(payload.get("clusters"), list):
+        if verbose:
+            print(f"Using the bundled offline digest: {len(payload['clusters'])} "
+                  f"clusters (built {payload.get('generated_date', '?')}).",
+                  file=sys.stderr)
+        return payload
+    return None
+
+
 def refresh(self_refresh=False, verbose=True):
     """Daily client update: get the NEWS payload (pull the central feed by default,
     or build it yourself with --self-refresh), then interleave concepts locally and
-    write the view cache. Network-resilient: on failure keep the old cache (False)."""
-    news = fetch_and_build_news(verbose) if self_refresh else pull_remote_news(verbose)
+    write the view cache. Network-resilient: on failure keep the old cache (False).
+    First-run-resilient: if the pull fails and there is no cache yet, fall back to
+    the bundled seed so a fresh install still shows news offline."""
+    if self_refresh:
+        news = fetch_and_build_news(verbose)
+    else:
+        news = pull_remote_news(verbose)
+        if not news and not os.path.exists(CACHE_FILE):
+            news = load_bundled_seed(verbose)   # offline-safe first paint
     if not news:
         if verbose:
             print("Update failed; keeping the existing cache.", file=sys.stderr)

@@ -589,6 +589,19 @@ def cmd_quickstart():
     state["wrapper"] = {"rc": rc_path}
     save_state(state)
 
+    # 3) warm up the news cache NOW so the first panel paint has content, instead
+    # of depending on the pull at first open. Falls back to the bundled seed if the
+    # central feed is unreachable, so this works even offline / behind a firewall.
+    try:
+        subprocess.run([os.path.join(HERE, "news"), "--refresh-only"], timeout=40,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if os.path.exists(os.path.join(HERE, "data", "news_cache.json")):
+            info("fetched today's news digest (panel will have content immediately)")
+        else:
+            info("could not fetch the digest now — it will load when the panel opens")
+    except Exception:  # noqa: BLE001 — never let a warm-up failure break install
+        info("could not fetch the digest now — it will load when the panel opens")
+
     print("")
     print("★ Done. Open a NEW terminal and run:   claude")
     print("  A news digest pane splits in beside Claude Code while it works,")
