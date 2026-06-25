@@ -23,10 +23,32 @@ if [ -n "$missing" ]; then
   echo "Install them and re-run." >&2
   exit 1
 fi
-if ! command -v tmux >/dev/null 2>&1; then
-  echo "note: 'tmux' not found — the split side panel needs it."
-  echo "      install it first (macOS: brew install tmux) for the full experience."
+
+# Claude Code itself is required — Meanwhile splits a pane beside it.
+if ! command -v claude >/dev/null 2>&1; then
+  echo "note: 'claude' (Claude Code) isn't on your PATH."
+  echo "      Meanwhile is an add-on for Claude Code — install it first:"
+  echo "      https://claude.com/claude-code"
   echo
+fi
+
+# tmux is required for the split side panel. Offer to install it on macOS;
+# read from /dev/tty so the prompt works even under  curl … | bash .
+if ! command -v tmux >/dev/null 2>&1; then
+  echo "'tmux' is not installed — the split side panel needs it."
+  if [ "$(uname)" = "Darwin" ] && command -v brew >/dev/null 2>&1 && [ -r /dev/tty ]; then
+    printf "Install tmux now with Homebrew? [Y/n] "
+    read -r ans < /dev/tty || ans=""
+    case "$ans" in
+      [Nn]*) echo "Skipping. Install it later with:  brew install tmux"; echo ;;
+      *) brew install tmux || { echo "  'brew install tmux' failed — install it manually."; echo; } ;;
+    esac
+  else
+    echo "  Install it first, then re-run this installer:"
+    echo "    macOS:          brew install tmux"
+    echo "    Debian/Ubuntu:  sudo apt install tmux"
+    echo
+  fi
 fi
 
 # --- clone or update ------------------------------------------------------
