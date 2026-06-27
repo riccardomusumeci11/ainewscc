@@ -1,0 +1,1294 @@
+{
+ "generated_at": 1782549879,
+ "generated_date": "2026-06-27",
+ "n_items": 255,
+ "n_sources_ok": 32,
+ "clusters": [
+  {
+   "headline": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+   "latest": "2026-06-24",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+     "source": "OpenAI News",
+     "date": "2026-06-24",
+     "extract": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+     "note": "",
+     "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+     "kind": "news"
+    },
+    {
+     "title": "OpenAI and Broadcom announce chip designed for LLM inference at scale",
+     "source": "AI",
+     "date": "2026-06-24",
+     "extract": "The silicon race is heating up amid the struggle to keep up with demand.",
+     "note": "",
+     "url": "https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.87,
+   "summary": "OpenAI and Broadcom have unveiled Jalapeño, a custom AI chip specifically engineered for large language model (LLM) inference. This new hardware is designed to enhance performance, efficiency, and scalability across AI systems. The collaboration between the two companies aims to optimize the infrastructure supporting advanced AI workloads.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+   "latest": "2026-06-27",
+   "n_sources": 3,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-27",
+     "extract": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+     "kind": "news"
+    },
+    {
+     "title": "Trump Administration Allows Anthropic to Release Mythos to Select US Organizations",
+     "source": "Feed: Artificial Intelligence Latest",
+     "date": "2026-06-27",
+     "extract": "After weeks of negotiations, the White House permitted Anthropic to grant access to its most advanced AI model to a select group of US companies and government agencies.",
+     "note": "",
+     "url": "https://www.wired.com/story/anthropic-restores-access-to-mythos/",
+     "kind": "news"
+    },
+    {
+     "title": "Anthropic’s Mythos 5 is back",
+     "source": "The Verge",
+     "date": "2026-06-26",
+     "extract": "After a rollercoaster negotiation process with the Trump administration that dragged on for two weeks, Anthropic's Mythos 5 is finally back in action - at least, somewhat, for a select group of organizations, according to a letter from the government to Anthropic that was viewed by The Verge. Fable 5, however - the public-facing Mythos-class",
+     "note": "",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/958458/anthropic-mythos-5-is-back-trump-negotiations",
+     "kind": "news"
+    }
+   ],
+   "score": 0.849,
+   "summary": "The Trump administration has authorized more than 100 U.S. companies and government agencies to utilize Anthropic’s Mythos 5. This authorization extends to the non-American employees working for these organizations. The new policy allows these entities to integrate the Mythos 5 model into their operations.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+     "source": "OpenAI News",
+     "date": "2026-06-22",
+     "extract": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
+     "note": "",
+     "url": "https://openai.com/index/patch-the-planet",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8017,
+   "summary": "OpenAI has launched Patch the Planet, a Daybreak initiative designed to assist open-source maintainers in identifying, validating, and resolving security vulnerabilities. The program utilizes a combination of AI tools and expert human review to support these developers. This effort aims to improve the overall security of the open-source ecosystem.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Daybreak: Tools for securing every organization in the world",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Daybreak: Tools for securing every organization in the world",
+     "source": "OpenAI News",
+     "date": "2026-06-22",
+     "extract": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
+     "note": "",
+     "url": "https://openai.com/index/daybreak-securing-the-world",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8017,
+   "summary": "OpenAI has launched a new suite of Daybreak tools designed to assist organizations in identifying, validating, and patching vulnerabilities at scale. This release includes the introduction of Codex Security and the GPT-5.5-Cyber model. These tools are intended to provide comprehensive security support for organizations globally.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "New usage analytics and updated spend controls for enterprises",
+   "latest": "2026-06-18",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "New usage analytics and updated spend controls for enterprises",
+     "source": "OpenAI News",
+     "date": "2026-06-18",
+     "extract": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage costs and scale AI with confidence.",
+     "note": "",
+     "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
+     "kind": "news"
+    }
+   ],
+   "score": 0.775,
+   "summary": "OpenAI has introduced new usage analytics and updated spend controls for ChatGPT Enterprise. These additions are designed to assist organizations in managing their costs. The tools aim to help businesses scale their use of artificial intelligence with greater confidence.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
+   "latest": "2026-06-23",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
+     "source": "NVIDIA Blog",
+     "date": "2026-06-23",
+     "extract": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
+     "kind": "news"
+    },
+    {
+     "title": "How Together AI built the world’s fastest speech-to-text stack",
+     "source": "Together.ai",
+     "date": "2026-05-29",
+     "extract": "Together AI built the fastest speech-to-text stack on Artificial Analysis by treating ASR as a full-path systems problem, not just a GPU inference problem.",
+     "note": "",
+     "url": "https://www.together.ai/blog/how-together-ai-built-the-worlds-fastest-speech-to-text-stack",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7433,
+   "summary": "NVIDIA technologies now power more than 400 of the world’s 500 fastest supercomputers. This figure represents 81% of the total systems on the TOP500 list. These rankings were released this week during the ISC High Performance conference held in Hamburg, Germany.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "ByteDance's \"iLLaDA\" is a diffusion language model that keeps up with Qwen2.5",
+   "latest": "2026-06-27",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "ByteDance's \"iLLaDA\" is a diffusion language model that keeps up with Qwen2.5",
+     "source": "The Decoder",
+     "date": "2026-06-27",
+     "extract": "Researchers from Renmin University and ByteDance have released iLLaDA, an 8B language model that generates text differently than ChatGPT. It matches Qwen2.5 at the base level but falls behind after fine-tuning.",
+     "note": "",
+     "url": "https://the-decoder.com/bytedances-illada-is-a-diffusion-language-model-that-keeps-up-with-qwen2-5/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.739,
+   "summary": "ByteDance and researchers from Renmin University have introduced iLLaDA, an 8B diffusion language model that utilizes a text generation process distinct from ChatGPT. In its base state, the model performs at a level comparable to Qwen2.5. However, the iLLaDA model demonstrates lower performance than Qwen2.5 once fine-tuning is applied.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "OpenAI launches Claude Mythos rival GPT-5.6 Sol under government access it calls unsustainable",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI launches Claude Mythos rival GPT-5.6 Sol under government access it calls unsustainable",
+     "source": "The Decoder",
+     "date": "2026-06-26",
+     "extract": "OpenAI's new flagship GPT-5.6 Sol beats Anthropic's Claude Mythos 5 in coding benchmarks, but the US government is forcing a restricted rollout. OpenAI isn't happy about it.",
+     "note": "",
+     "url": "https://the-decoder.com/openais-claude-mythos-competitor-gpt-5-6-sol-launches-under-government-controlled-access-it-calls-unsustainable/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "OpenAI has released its new flagship model, GPT-5.6 Sol, which outperforms Anthropic’s Claude Mythos 5 in coding benchmarks. The US government is currently mandating a restricted rollout for the model. OpenAI has characterized this government-imposed access strategy as unsustainable.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Linux Foundation and 20 tech giants launch Akrites to fix open-source flaws before AI-powered attacks hit",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Linux Foundation and 20 tech giants launch Akrites to fix open-source flaws before AI-powered attacks hit",
+     "source": "The Decoder",
+     "date": "2026-06-26",
+     "extract": "About twenty tech companies, AI labs, and banks are joining forces through Akrites to fix vulnerabilities in critical open-source software before AI tools can exploit them.",
+     "note": "",
+     "url": "https://the-decoder.com/linux-foundation-and-20-tech-giants-launch-akrites-to-fix-open-source-flaws-before-ai-powered-attacks-hit/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "The Linux Foundation and 20 tech companies, AI labs, and banks have launched the Akrites initiative to address security vulnerabilities in critical open-source software. This collaboration aims to remediate flaws before they can be exploited by AI-powered attack tools. The project brings together these diverse organizations to proactively secure the open-source ecosystem against emerging threats.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-25",
+     "extract": "OpenAI reportedly plans to share its newest model, GPT 5.6, with a select group of partners instead of with the broader public. The reason: the Trump administration told it to.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7257,
+   "summary": "The White House has requested that OpenAI delay the public release of its latest model, GPT 5.6, due to safety concerns. Following this directive from the Trump administration, the company reportedly intends to limit access to the model to a select group of partners. This strategy replaces the original plan to launch GPT 5.6 to the broader public.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Repositioning retail for the AI era",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Repositioning retail for the AI era",
+     "source": "MIT Technology Review",
+     "date": "2026-06-25",
+     "extract": "Artificial intelligence is rapidly reshaping retail, but not in the ways consumers might immediately notice. The biggest transformation may not be flashy virtual try-ons or chatbot shopping assistants, but in how decisions are made behind the scenes: how products surface in search results, how inventory moves through supply chains, how engineers ship code faster, and…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7257,
+   "summary": "Artificial intelligence is currently transforming the retail industry by optimizing behind-the-scenes operational decision-making. Rather than focusing on consumer-facing tools like virtual try-ons or shopping chatbots, companies are prioritizing AI for managing supply chain inventory and improving search result rankings. Additionally, retailers are utilizing these technologies to help engineers accelerate the speed at which they ship code.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Optimize model training on Amazon SageMaker AI with NVIDIA Blackwell",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Optimize model training on Amazon SageMaker AI with NVIDIA Blackwell",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-25",
+     "extract": "This post shows you how to configure training jobs on Amazon SageMaker AI to get the most out of Blackwell’s architecture on AWS. You learn how to select batch sizes and sequence lengths that take advantage of Blackwell’s expanded memory, choose the right precision format for your model size (1B to 64B parameters), and apply activation checkpointing strategically. By the end, you have a practical framework for tuning your training configuration and launching distributed training jobs on P6-B200 instances.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7017,
+   "summary": "Amazon SageMaker AI now supports optimized model training for NVIDIA Blackwell architecture on AWS. Users can configure training jobs on P6-B200 instances by selecting specific batch sizes and sequence lengths to utilize Blackwell’s expanded memory. The framework provides guidance on choosing precision formats for models ranging from 1B to 64B parameters and applying strategic activation checkpointing. These configurations allow developers to tune training parameters and launch distributed training jobs effectively.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Quoting OpenAI",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.4,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Quoting OpenAI",
+     "source": "Simon Willison's Weblog",
+     "date": "2026-06-26",
+     "extract": "We're beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has competitive performance to GPT‑5.5 while being 2x cheaper and Luna brings strong capability at our lowest cost. [...] We believe in broad access, and we plan to make GPT‑5.6 Sol, Terra, and Luna generally available in the coming weeks. As part of our ongoing engagement with the U.S. government, we previewed our plans and the models’ capabilities ahead of today’s launch.",
+     "note": "",
+     "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6843,
+   "summary": "OpenAI has launched a limited preview of its GPT-5.6 series, which includes the flagship model Sol, the balanced model Terra, and the fast, affordable model Luna. Terra offers performance competitive with GPT-5.5 at half the cost, while Luna provides high capability at the company's lowest price point. OpenAI intends to make all three models generally available in the coming weeks. The company also previewed these models and their capabilities to the U.S. government prior to today's launch.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "From Materials Simulation to Experimental Astronomy, New NVIDIA AI Software Unlocks Scientific Discoveries",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "From Materials Simulation to Experimental Astronomy, New NVIDIA AI Software Unlocks Scientific Discoveries",
+     "source": "NVIDIA Blog",
+     "date": "2026-06-22",
+     "extract": "At the ISC conference running in Hamburg this week, NVIDIA is introducing new software that speeds AI for science, from chemistry and materials discovery to the search for dark matter. The NVIDIA DAQIRI library and new NVIDIA ALCHEMI NIM microservices — as well as the NVIDIA cuPhoton reference code, coming soon — turn work that",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/ai-for-science-software-cuda/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6817,
+   "summary": "NVIDIA introduced new software at the ISC conference in Hamburg this week designed to accelerate scientific AI research across fields ranging from chemistry and materials discovery to dark matter exploration. The company is launching the NVIDIA DAQIRI library and new NVIDIA ALCHEMI NIM microservices to facilitate these computational tasks. Additionally, NVIDIA announced that the NVIDIA cuPhoton reference code will be available soon.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "AI and Liability",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.4,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "AI and Liability",
+     "source": "Simon Willison's Weblog",
+     "date": "2026-06-25",
+     "extract": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them—and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be a massive handout to companies, and would introduce disastrous incentives for corporate misbehavior.",
+     "note": "",
+     "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6777,
+   "summary": "A recent German ruling has established that Google is liable for errors generated by its AI overviews. Security expert Bruce Schneier argues that AI agents must be legally treated as representatives of the organizations that deploy them. He contends that if a company would be held responsible for inaccuracies produced by human writers, it should face the same liability for its AI-generated content. According to Schneier, allowing businesses to use faulty AI as a legal shield would create harmful incentives for corporate misconduct.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "simonw/browser-compat-db",
+   "latest": "2026-06-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.4,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "simonw/browser-compat-db",
+     "source": "Simon Willison's Weblog",
+     "date": "2026-06-24",
+     "extract": "simonw/browser-compat-db Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils . I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers. GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions workflow that builds the database and then force-pushes it to a db \"orphan\" branch.",
+     "note": "",
+     "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything",
+     "kind": "news"
+    }
+   ],
+   "score": 0.671,
+   "summary": "Simon Willison has launched a new repository, simonw/browser-compat-db, which converts the mdn/browser-compat-data repository into a ~66MB SQLite database. The project utilizes a script generated by Claude Code for web (Opus 4.8) and the sqlite-utils library to perform the conversion. To ensure the database is accessible via the GitHub CDN with open CORS headers, a GitHub Actions workflow was created by Codex Desktop (GPT-5.5). This workflow automates the database build process and force-pushes the resulting file to a dedicated \"orphan\" branch named \"db.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Vibe gets to work.",
+   "latest": "2026-05-28",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Vibe gets to work.",
+     "source": "Mistral AI Blog",
+     "date": "2026-05-28",
+     "extract": "The unified agent for long-horizon productivity and coding, launching with Work and Code modes. Plus, a new Vibe VS Code extension.",
+     "note": "",
+     "url": "https://mistral.ai/news/vibe-agent/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.635,
+   "summary": "Vibe has launched as a unified agent designed for long-horizon productivity and coding tasks. The platform introduces two distinct operational settings: Work mode and Code mode. Additionally, the release includes a new Vibe extension specifically for VS Code.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Introducing physics AI at Mistral: the foundation for engineering acceleration.",
+   "latest": "2026-05-27",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing physics AI at Mistral: the foundation for engineering acceleration.",
+     "source": "Mistral AI Blog",
+     "date": "2026-05-27",
+     "extract": "A new class of AI models that predict the behavior of physical systems, powering the engineers and hardware products of tomorrow.",
+     "note": "",
+     "url": "https://mistral.ai/news/introducing-physics-ai-at-mistral/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.635,
+   "summary": "Mistral has introduced a new class of physics AI models designed to predict the behavior of physical systems. These models are intended to serve as a foundation for engineering acceleration. The technology aims to support the development of future engineers and hardware products.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
+   "latest": "2026-05-19",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
+     "source": "AI",
+     "date": "2026-05-19",
+     "extract": "For a quarter century, the Google search box has been one of the most recognizable interfaces in computing: a thin white rectangle, a blinking cursor, a few typed words, and a list of blue links. On Tuesday, Google will formally retire that paradigm. At its annual I/O developer conference , Google announced a sweeping redesign of the search box itself — the literal text field where billions of queries begin every day — transforming it from a simple keyword input into a dynamic, AI-driven conversation starter that can accept text, images, PDFs, videos, and even open Chrome tabs as inputs.",
+     "note": "",
+     "url": "https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think",
+     "kind": "news"
+    }
+   ],
+   "score": 0.539,
+   "summary": "Google is retiring its 25-year-old search box design, replacing the simple text field with a dynamic, AI-driven interface. Announced Tuesday at the annual I/O developer conference, the new input system moves beyond basic keyword queries. The redesigned tool now accepts a variety of inputs, including images, videos, PDFs, and open Chrome tabs.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Data Formulator 0.7: AI-powered data analytics for enterprise data",
+   "latest": "2026-05-28",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Data Formulator 0.7: AI-powered data analytics for enterprise data",
+     "source": "Microsoft Research",
+     "date": "2026-05-28",
+     "extract": "Data Formulator introduces AI-powered analytics for enterprise data workflows. Data teams can easily bring enterprise data into an AI-ready workspace where users can explore, analyze, and visualize data with AI agents to turn raw data into actionable insights.",
+     "note": "",
+     "url": "https://www.microsoft.com/en-us/research/blog/data-formulator-0-7-ai-powered-data-analytics-for-enterprise-data/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "Data Formulator 0.7 has launched to provide AI-powered data analytics specifically designed for enterprise data workflows. The platform offers an AI-ready workspace where data teams can import information to explore, analyze, and visualize content. Users leverage AI agents within this environment to transform raw data into actionable insights.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Together AI and Pearl Research Labs Team Up to Reduce the Cost of AI Inference",
+   "latest": "2026-05-15",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Together AI and Pearl Research Labs Team Up to Reduce the Cost of AI Inference",
+     "source": "Together.ai",
+     "date": "2026-05-15",
+     "extract": "Together AI partners with Pearl Research Labs to launch a discounted Pearl-powered inference endpoint for Gemma-4-31B-it-pearl, using Proof of Useful Work to turn AI workloads into crypto emissions.",
+     "note": "",
+     "url": "https://www.together.ai/blog/together-ai-partners-with-pearl-research-labs",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "Together AI has partnered with Pearl Research Labs to lower AI inference costs by launching a discounted endpoint for the Gemma-4-31B-it-pearl model. This collaboration utilizes Proof of Useful Work technology to convert AI processing tasks into crypto emissions. The initiative aims to reduce expenses associated with running inference workloads.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "GridSFM: A new, small foundation model for the electric grid",
+   "latest": "2026-05-13",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "GridSFM: A new, small foundation model for the electric grid",
+     "source": "Microsoft Research",
+     "date": "2026-05-13",
+     "extract": "Introducing GridSFM, a small foundation model that can predict AC optimal power flow in milliseconds, boosting efficiency and unlocking cost savings. Learn how GridSFM gives grid operators direct visibility into congestion, stability, and system health.",
+     "note": "",
+     "url": "https://www.microsoft.com/en-us/research/blog/gridsfm-a-new-small-foundation-model-for-the-electric-grid/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "GridSFM is a new small foundation model designed to predict AC optimal power flow in milliseconds. By providing grid operators with direct visibility into system health, stability, and congestion, the tool aims to improve operational efficiency. The model is intended to unlock cost savings for the electric grid.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Introducing voice finder — a new tool to quickly find the right voice for your app from over 600+ voices",
+   "latest": "2026-05-12",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing voice finder — a new tool to quickly find the right voice for your app from over 600+ voices",
+     "source": "Together.ai",
+     "date": "2026-05-12",
+     "extract": "Voice finder helps developers search, match, filter, and audition 600+ voices across Together AI TTS models using natural-language prompts or uploaded audio samples.",
+     "note": "",
+     "url": "https://www.together.ai/blog/introducing-voice-finder-a-new-tool-to-quickly-find-the-right-voice-for-your-app-from-over-600-voices",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "Together AI has launched Voice finder, a new tool that allows developers to search, match, filter, and audition more than 600 voices for their applications. Users can locate specific voices across the company's text-to-speech models by utilizing either natural-language prompts or uploaded audio samples. This utility is designed to help developers quickly identify the most suitable voice options for their projects.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Previewing GPT-5.6 Sol: a next-generation model",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Previewing GPT-5.6 Sol: a next-generation model",
+     "source": "OpenAI News",
+     "date": "2026-06-26",
+     "extract": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
+     "note": "",
+     "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4883,
+   "summary": "OpenAI has unveiled a preview of GPT-5.6 Sol, which the company describes as a next-generation model. This new iteration features enhanced performance across coding, science, and cybersecurity tasks. Additionally, the model is integrated with OpenAI’s most advanced safety stack to date.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "How agents are transforming work",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "How agents are transforming work",
+     "source": "OpenAI News",
+     "date": "2026-06-25",
+     "extract": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+     "note": "",
+     "url": "https://openai.com/index/how-agents-are-transforming-work",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "OpenAI has released a new research paper detailing how AI agents are transforming work environments. These agents enable the completion of longer and more complex tasks. Furthermore, the technology is expanding productivity across various professional roles.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Helping build shared standards for advanced AI",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Helping build shared standards for advanced AI",
+     "source": "OpenAI News",
+     "date": "2026-06-23",
+     "extract": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
+     "note": "",
+     "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4683,
+   "summary": "OpenAI is contributing to the development of shared standards for advanced artificial intelligence by collaborating with the Appia Foundation. This initiative focuses on establishing global cooperation, safety practices, and evaluation frameworks for the technology. Through this partnership, the company aims to help build a unified foundation for AI advancement.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+   "latest": "2026-06-23",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+     "source": "OpenAI News",
+     "date": "2026-06-23",
+     "extract": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
+     "note": "",
+     "url": "https://openai.com/index/gpt-5-immunology-mystery",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4683,
+   "summary": "Immunologist Derya Unutmaz utilized GPT-5 Pro to resolve a 3-year-old mystery regarding T cell behavior. The AI model provided specific insights that enabled this breakthrough in immunology. These findings are expected to assist in ongoing research concerning cancer and autoimmune conditions.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Codex-maxxing for long-running work",
+   "latest": "2026-06-22",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Codex-maxxing for long-running work",
+     "source": "OpenAI News",
+     "date": "2026-06-22",
+     "extract": "Learn how Jason Liu uses Codex to preserve context, manage complex projects, and help work continue beyond a single prompt.",
+     "note": "",
+     "url": "https://openai.com/index/codex-maxxing-long-running-work",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4617,
+   "summary": "Jason Liu is utilizing Codex to maintain context and manage complex projects that extend beyond the constraints of a single prompt. This approach, referred to as \"Codex-maxxing,\" allows for the preservation of information across long-running work sessions. By employing these techniques, Liu enables his development tasks to continue seamlessly without losing necessary project data.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Improving health intelligence in ChatGPT",
+   "latest": "2026-06-18",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Improving health intelligence in ChatGPT",
+     "source": "OpenAI News",
+     "date": "2026-06-18",
+     "extract": "Learn how GPT-5.5 Instant improves ChatGPT’s health and wellness responses with stronger reasoning, better context, clearer communication, and physician-informed evaluations.",
+     "note": "",
+     "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
+     "kind": "news"
+    }
+   ],
+   "score": 0.435,
+   "summary": "OpenAI has introduced GPT-5.5 Instant to enhance the health and wellness capabilities of ChatGPT. This update delivers improved reasoning, clearer communication, and a better grasp of context for user inquiries. Additionally, the model incorporates physician-informed evaluations to provide more reliable health intelligence.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Prompt Injection in Automated Résumé Screening with Large Language Models: Single and Multi-Injection Settings",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.2,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": true,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Prompt Injection in Automated Résumé Screening with Large Language Models: Single and Multi-Injection Settings",
+     "source": "arXiv cs.AI",
+     "date": "2026-06-25",
+     "extract": "Large language models (LLMs) are increasingly used to screen and rank job applicants, creating incentives for candidates to strategically manipulate algorithmic hiring systems. We study prompt injection in automated résumé screening, defined as subtle self-promotional text that introduces no new qualifications but is designed to influence LLM evaluations. Using controlled experiments, we show that prompt injection reliably improves applicant rankings when résumé quality is homogeneous and few candidates inject. However, its effectiveness rapidly diminishes as more candidates inject, collapsing when manipulation becomes widespread.",
+     "note": "",
+     "url": "http://arxiv.org/abs/2606.27287v1",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4,
+   "summary": "Automated résumé screening systems using large language models are vulnerable to prompt injection, a technique where candidates insert subtle self-promotional text to artificially boost their rankings. Controlled experiments demonstrate that this manipulation reliably improves an applicant’s standing when résumé quality is homogeneous and only a small number of candidates utilize the tactic. However, the effectiveness of these injections declines rapidly as more applicants adopt the strategy. The influence of such manipulations collapses entirely when the practice becomes widespread among candidates.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Blackwell Approachability and Gradient Equilibrium are Equivalent",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.2,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": true,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Blackwell Approachability and Gradient Equilibrium are Equivalent",
+     "source": "arXiv cs.LG",
+     "date": "2026-06-25",
+     "extract": "Gradient equilibrium (GEQ) is a recently introduced online optimization framework that generalizes first-order stationarity from offline optimization and abstracts problems like online conformal prediction. While GEQ has curious similarities with known online learning frameworks, namely regret minimization, prior work has shown that GEQ error and regret are incomparable objectives, leaving open a precise understanding of how GEQ fits into the broader online learning landscape. In this work, we show that GEQ is equivalent to Blackwell approachability in the algorithmic sense.",
+     "note": "",
+     "url": "http://arxiv.org/abs/2606.27315v1",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4,
+   "summary": "Blackwell approachability and gradient equilibrium (GEQ) are equivalent in the algorithmic sense. GEQ is an online optimization framework that generalizes first-order stationarity from offline optimization and abstracts problems such as online conformal prediction. Although GEQ shares similarities with regret minimization, prior research established that GEQ error and regret are incomparable objectives. This finding clarifies the position of GEQ within the broader online learning landscape.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "IEEE Rolls Out Large Language Models Virtual Training Course",
+   "latest": "2026-06-19",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": true,
+   "items": [
+    {
+     "title": "IEEE Rolls Out Large Language Models Virtual Training Course",
+     "source": "IEEE Spectrum",
+     "date": "2026-06-19",
+     "extract": "Large language models have moved out of the research lab and into engineers’ daily workflow. LLMs serve as reasoning engines that can orchestrate complex tasks including identifying vulnerabilities in source code and transforming fragmented project discussions into rigorous technical specifications. While the general public uses AI tools to write email and plan vacations, technical professionals use LLMs as core architectural elements that are fundamentally changing how digital infrastructures are built and maintained. As the AI models move into mainstream engineering practice, the demand for technical expertise is rising.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/large-language-models-ieee-course",
+     "kind": "news"
+    }
+   ],
+   "score": 0.397,
+   "summary": "IEEE has launched a virtual training course focused on large language models to address the growing demand for technical expertise as these tools become integrated into engineering workflows. The curriculum highlights how LLMs function as reasoning engines capable of identifying source code vulnerabilities and converting project discussions into technical specifications. By moving beyond general consumer applications, these models are now serving as core architectural elements in the construction and maintenance of digital infrastructure.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "An AI model programmed nonstop for 19 days on a single MirrorCode task that cost $2,600 to run",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "An AI model programmed nonstop for 19 days on a single MirrorCode task that cost $2,600 to run",
+     "source": "The Decoder",
+     "date": "2026-06-26",
+     "extract": "Epoch AI's new MirrorCode benchmark tests whether AI models can recreate complete programs without access to the original code. Claude Opus 4.7 leads with a 56 percent solve rate, rebuilding a 16,000-line toolkit in just 14 hours. But every model tested still fails on the most complex tasks.",
+     "note": "",
+     "url": "https://the-decoder.com/an-ai-model-programmed-nonstop-for-19-days-on-a-single-mirrorcode-task-that-cost-2600-to-run/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "Epoch AI's MirrorCode benchmark evaluates an AI model's ability to reconstruct complete programs without original source code access. Claude Opus 4.7 currently leads the field with a 56 percent solve rate, successfully rebuilding a 16,000-line toolkit in 14 hours. Despite these results, every model tested by Epoch AI continues to fail when faced with the most complex tasks. One specific MirrorCode task required an AI model to program nonstop for 19 days at a total cost of $2,600.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "AI startup Lindy ditched Claude entirely for Deepseek, saving millions as cost pressure mounts on Anthropic",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "AI startup Lindy ditched Claude entirely for Deepseek, saving millions as cost pressure mounts on Anthropic",
+     "source": "The Decoder",
+     "date": "2026-06-26",
+     "extract": "AI startup Lindy ditched Claude entirely for Deepseek after AI costs exceeded personnel costs. CEO Flo Crivello calls it \"a matter of survival for the business.\"",
+     "note": "",
+     "url": "https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "AI startup Lindy has completely replaced Anthropic’s Claude models with Deepseek to reduce expenses. CEO Flo Crivello stated that the transition was necessary because AI-related costs had surpassed the company's personnel spending. Crivello described the switch as a matter of survival for the business as pressure to manage operational costs increases.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Altman won't go public for less than $1 trillion, so OpenAI's IPO may slip to 2027",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Altman won't go public for less than $1 trillion, so OpenAI's IPO may slip to 2027",
+     "source": "The Decoder",
+     "date": "2026-06-26",
+     "extract": "Advisors are telling OpenAI to hold off on going public until next year. The triggers: volatile tech markets and SpaceX's weak stock performance after its record IPO. SoftBank, one of OpenAI's biggest backers, lost 13 percent in a single day.",
+     "note": "",
+     "url": "https://the-decoder.com/altman-wont-go-public-for-less-than-1-trillion-so-openais-ipo-may-slip-to-2027/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "OpenAI’s initial public offering may be delayed until 2027 because CEO Sam Altman will not take the company public for a valuation below $1 trillion. Advisors are recommending that OpenAI postpone an IPO until next year due to volatile tech markets and the weak stock performance of SpaceX following its record IPO. Additionally, SoftBank, a major backer of OpenAI, recently experienced a 13 percent loss in a single day.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "OpenAI's GPT 5.6 rollout now requires US government approval on a \"customer by customer basis\"",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI's GPT 5.6 rollout now requires US government approval on a \"customer by customer basis\"",
+     "source": "The Decoder",
+     "date": "2026-06-26",
+     "extract": "At the request of the U.S. government, OpenAI will initially make its new GPT-5.6 model available only to select partners, with access approved on a \"customer by customer\" basis. CEO Sam Altman says this isn't a \"preferred long term model.\" After the forced takedown of Anthropic's Fable, AI labs are afraid of a de facto licensing regime for AI models.",
+     "note": "",
+     "url": "https://the-decoder.com/openais-gpt-5-6-rollout-now-requires-us-government-approval-on-a-customer-by-customer-basis/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "OpenAI will restrict the initial release of its GPT-5.6 model to select partners following a request from the U.S. government. Access to the new model is now subject to approval on a \"customer by customer\" basis. CEO Sam Altman stated that this rollout strategy is not intended to be a preferred long-term model. This development follows the forced takedown of Anthropic's Fable, leaving AI labs concerned about a potential de facto licensing regime for AI models.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-26",
+     "extract": "“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best tools from users, developers, enterprises, cyber defenders, and global partners who need them.”",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "OpenAI has restricted the rollout of its GPT-5.6 model following a formal request from the government. The company stated that this government access process should not serve as a long-term default for future releases. According to OpenAI, these limitations prevent users, developers, enterprises, cyber defenders, and global partners from accessing essential tools.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-26",
+     "extract": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal is less of a",
+     "note": "",
+     "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "OpenAI is developing a custom inference chip codenamed Jalapeño in collaboration with Broadcom to reduce its reliance on Nvidia. This move follows a broader industry trend where companies including Google, Apple, and SpaceX are designing their own proprietary hardware. By building these internal solutions, these organizations aim to mitigate the risks associated with depending on a single chip supplier.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "It’s not about Anthropic vs. OpenAI anymore",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "It’s not about Anthropic vs. OpenAI anymore",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-26",
+     "extract": "AI models have progressed to the point where their capabilities have real political consequences. Dealing with those consequences will require collective action.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "Artificial intelligence models have reached a level of advancement where their capabilities now carry tangible political consequences. Addressing these impacts will necessitate collective action. The current landscape of the industry has evolved beyond a simple rivalry between Anthropic and OpenAI.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-26",
+     "extract": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal is less of a",
+     "note": "",
+     "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "OpenAI has announced plans to develop a custom inference chip named Jalapeño. The company is collaborating with Broadcom to build this hardware, joining other major firms like Google, Apple, and SpaceX in creating proprietary alternatives to Nvidia’s products. This initiative aims to reduce the industry's reliance on a single supplier for AI chips.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Most major AI chatbots still lean left on political questions, even \"anti-woke\" models are no exception",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Most major AI chatbots still lean left on political questions, even \"anti-woke\" models are no exception",
+     "source": "The Decoder",
+     "date": "2026-06-25",
+     "extract": "A Washington Post investigation shows that most major AI chatbots still skew left on political questions. OpenAI's GPT-5.5 gave exclusively left-leaning arguments 80 percent of the time, and even Musk's Grok, marketed as anti-\"woke,\" leaned left more often than not. The one outlier: Google's Gemini 3.1 Pro presented both sides 93 percent of the time.",
+     "note": "",
+     "url": "https://the-decoder.com/most-major-ai-chatbots-still-lean-left-on-political-questions-even-anti-woke-models-are-no-exception/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "A Washington Post investigation reveals that a majority of prominent AI chatbots maintain a left-leaning bias when responding to political inquiries. OpenAI’s GPT-5.5 provided exclusively left-leaning arguments in 80 percent of its responses, while Elon Musk’s Grok, which is marketed as anti-\"woke,\" also exhibited a left-leaning tendency. In contrast, Google’s Gemini 3.1 Pro served as an outlier by presenting both sides of an issue 93 percent of the time.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Insurers turn to generative AI for catastrophe modeling, but hallucinations and sales logic could get in the way",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Insurers turn to generative AI for catastrophe modeling, but hallucinations and sales logic could get in the way",
+     "source": "The Decoder",
+     "date": "2026-06-25",
+     "extract": "Diffusion models generate tens of thousands of plausible weather events where historical data doesn't exist. Insurers are hoping for more precise risk assessments. Researchers warn about hallucinations.",
+     "note": "",
+     "url": "https://the-decoder.com/insurers-turn-to-generative-ai-for-catastrophe-modeling-but-hallucinations-and-sales-logic-could-get-in-the-way/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Insurance companies are adopting generative AI, specifically diffusion models, to create tens of thousands of plausible weather events in scenarios where historical data is unavailable. The industry is utilizing this technology in an effort to achieve more precise catastrophe modeling and risk assessments. However, researchers are cautioning that the potential for hallucinations and the influence of sales logic could hinder the effectiveness of these tools.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-25",
+     "extract": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand, its investor says.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Patronus AI has secured $50 million in funding to develop \"digital worlds\" designed to stress-test AI agents. The startup was established by former Meta AI researchers. According to its investor, the company is currently experiencing nearly insatiable demand for its agent-testing services.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Anthropic’s Claude is winning over paid consumers, a market owned by ChatGPT",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Anthropic’s Claude is winning over paid consumers, a market owned by ChatGPT",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-25",
+     "extract": "Despite ChatGPT's commanding market lead, consumers who pay for AI have been increasingly choosing Anthropic's Claude, data shows.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Anthropic’s Claude is gaining significant traction among paid AI consumers, a market segment previously dominated by ChatGPT. Despite ChatGPT’s established market leadership, recent data indicates that a growing number of paying users are opting for Anthropic’s alternative. This shift highlights an increasing consumer preference for Claude within the competitive landscape of paid artificial intelligence services.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "General Intuition’s $2.3B bet that video games can train AI agents for the real world",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "General Intuition’s $2.3B bet that video games can train AI agents for the real world",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-25",
+     "extract": "General Intuition has raised $320 million to scale AI trained on millions of hours of gameplay, betting action data can help AI develop something closer to human intuition.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "General Intuition has secured $320 million in funding to advance its $2.3 billion initiative focused on training AI agents using video games. The company intends to utilize millions of hours of gameplay data to help its systems develop a form of human-like intuition. By leveraging this action data, the firm aims to create AI capable of operating effectively in the real world.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Databricks’ former AI chief thinks he can cut AI’s power bill by 1,000x",
+   "latest": "2026-06-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Databricks’ former AI chief thinks he can cut AI’s power bill by 1,000x",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-06-25",
+     "extract": "Un-0 is an image-generation system tool that shows for the first time how the company's technology can replicate conventional AI systems.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/06/25/databricks-former-ai-chief-thinks-he-can-cut-ais-power-bill-by-1000x/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "Former Databricks AI chief Naveen Rao is launching Un-0, an image-generation system that reportedly reduces AI power consumption by a factor of 1,000. This tool demonstrates for the first time how the company’s proprietary technology can replicate the functionality of conventional AI systems. The development marks a significant shift in efficiency for generative image models.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Stripe, Anthropic, and OpenAI are backing an effort to stop respiratory infections",
+   "latest": "2026-06-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Stripe, Anthropic, and OpenAI are backing an effort to stop respiratory infections",
+     "source": "MIT Technology Review",
+     "date": "2026-06-24",
+     "extract": "The common cold comes for us all—often more than once a year. And there is no way to prevent it. The best you can do is take vitamin C and stay away from people with the sniffles. Now the payment company Stripe, founded by brothers Patrick and John Collison, says it will fund a new…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/06/24/1139621/stripe-anthropic-and-openai-are-backing-an-effort-to-stop-respiratory-infections/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.379,
+   "summary": "Stripe, Anthropic, and OpenAI are backing a new effort to prevent respiratory infections. The payment company Stripe, founded by brothers Patrick and John Collison, announced it will fund this initiative. This project aims to address the common cold, for which there is currently no preventative measure beyond vitamin C and social distancing.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The emergence of the web data infrastructure layer for AI",
+   "latest": "2026-06-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The emergence of the web data infrastructure layer for AI",
+     "source": "MIT Technology Review",
+     "date": "2026-06-24",
+     "extract": "AI is booming. New use cases are emerging each day. To capitalize on the technology’s potential, enterprises require data at scale. In many cases, though, the relevant information is blocked or unstructured, which limits its use by AI models. To understand this challenge, consider the foundation of the web itself. The web was not designed…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/06/24/1139202/the-emergence-of-the-web-data-infrastructure-layer-for-ai/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.379,
+   "summary": "Enterprises currently face significant obstacles in scaling AI technology because much of the necessary information remains unstructured or inaccessible. This data bottleneck prevents organizations from fully capitalizing on the growing number of emerging AI use cases. The industry is responding to this challenge by developing a new web data infrastructure layer designed to address these limitations.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Fluid, natural voice translation with Gemini 3.5 Live Translate",
+   "latest": "2026-06-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Fluid, natural voice translation with Gemini 3.5 Live Translate",
+     "source": "Google DeepMind News",
+     "date": "2026-06-09",
+     "extract": "Gemini 3.5 Live Translate brings near real-time, natural speech translation to Google AI Studio, Google Translate and Google Meet.",
+     "note": "",
+     "url": "https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.375,
+   "summary": "Google has introduced Gemini 3.5 Live Translate, a feature designed to provide near real-time, natural speech translation. This capability is now available across Google AI Studio, Google Translate, and Google Meet. The tool aims to facilitate seamless communication by processing spoken language with high fluidity.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Build interactive PDF text extraction from Amazon S3",
+   "latest": "2026-06-26",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Build interactive PDF text extraction from Amazon S3",
+     "source": "Artificial Intelligence",
+     "date": "2026-06-26",
+     "extract": "In this post, you’ll build a server that extracts text from PDF files in Amazon S3 in real time. This protocol-based approach provides programmatic document access. You’ll walk through the architecture, set up the server, and run interactive document queries. Along the way, you’ll compare this approach with Amazon Textract so you can decide which tool fits your workload.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/build-interactive-pdf-text-extraction-from-amazon-s3/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "Developers can now build a server to perform real-time text extraction from PDF files stored in Amazon S3. This protocol-based method enables programmatic document access and supports interactive document queries. The provided guide details the necessary server setup and system architecture for implementation. Users are also encouraged to compare this new approach against Amazon Textract to determine the most suitable tool for their specific workloads.",
+   "summary_src": "gemini"
+  }
+ ]
+}
