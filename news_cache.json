@@ -1,0 +1,1339 @@
+{
+ "generated_at": 1789038233,
+ "generated_date": "2026-09-10",
+ "n_items": 248,
+ "n_sources_ok": 30,
+ "clusters": [
+  {
+   "headline": "ChatGPT Images 2.5: Faster, more precise, but not the same for everyone",
+   "latest": "2026-09-09",
+   "n_sources": 3,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "ChatGPT Images 2.5: Faster, more precise, but not the same for everyone",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "OpenAI is releasing two new image models with ChatGPT Images 2.5. Flare handles faster generation, Sunburst delivers more precise edits. It's still unclear which model ChatGPT users get and when. Our test offers the first hints on who actually benefits from the improvements.",
+     "note": "",
+     "url": "https://the-decoder.com/chatgpt-images-2-5-faster-more-precise-but-not-the-same-for-everyone/",
+     "kind": "news"
+    },
+    {
+     "title": "Introducing ChatGPT Images 2.5",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
+     "note": "",
+     "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+     "kind": "news"
+    },
+    {
+     "title": "Introducing ChatGPT Images 2.5",
+     "source": "Simon Willison's Weblog",
+     "date": "2026-09-08",
+     "extract": "Introducing ChatGPT Images 2.5 OpenAI's image generation models are apparently used \"more than 3 billion images across ChatGPT Images and the GPT‑Image models in the API\". This latest release improves their instruction-following ability across multiple turns, responds faster, and \"is better at preserving the subjects in your reference photos\". There are two new model IDs in the API: gpt-image-2.5-sunburst and gpt-image-2.5-flare . Based on this I think Sunburst is the stronger option: Choose Sunburst for workflows where editing precision matters most, and Flare for fast, high-quality everyday image generation.",
+     "note": "",
+     "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.9383,
+   "summary": "OpenAI is launching two new image models as part of ChatGPT Images 2.5, featuring Flare for faster generation and Sunburst for more precise edits. It remains undetermined which of these models ChatGPT users will receive and when. A recent test provides the initial indications regarding who stands to benefit from the upgrades.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
+     "source": "Mistral AI Blog",
+     "date": "2026-09-08",
+     "extract": "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion.",
+     "note": "",
+     "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.8217,
+   "summary": "Mistral has secured €3 billion in a Series D funding round with the goal of establishing sovereign, open-weight artificial intelligence at the technology frontier. This investment brings the company's post-money valuation to more than €21 billion.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Supporting independent journalism in Ukraine",
+   "latest": "2026-09-07",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Supporting independent journalism in Ukraine",
+     "source": "OpenAI News",
+     "date": "2026-09-07",
+     "extract": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+     "note": "",
+     "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+     "kind": "news"
+    }
+   ],
+   "score": 0.815,
+   "summary": "OpenAI, AIRPPU, and WAN-IFRA have introduced an artificial intelligence initiative designed to assist Ukrainian news media outlets in improving innovation, independence, and resilience. This collaborative program specifically aims to support independent journalism within Ukraine.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Volvo XC40 PHEV is back with a new look, better sensors, and Gemini AI",
+   "latest": "2026-09-10",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Volvo XC40 PHEV is back with a new look, better sensors, and Gemini AI",
+     "source": "The Verge",
+     "date": "2026-09-10",
+     "extract": "It's been about three years since Volvo discontinued its plug-in hybrid XC40. The mild hybrid version remains on sale in the US and elsewhere, alongside the electric EX40. Today, Volvo announced it was bringing back the PHEV version and giving it a major facelift. When it arrives at dealerships early next year, the new XC40",
+     "note": "",
+     "url": "https://www.theverge.com/transportation/992443/volvo-xc40-phev-specs-price-gemini",
+     "kind": "news"
+    }
+   ],
+   "score": 0.739,
+   "summary": "Volvo is reintroducing the plug-in hybrid XC40 with a major facelift, upgraded sensors, and Gemini AI, following a three-year hiatus after the model was discontinued. The redesigned vehicle is scheduled to arrive at dealerships early next year. Meanwhile, the mild hybrid variant and the electric EX40 continue to remain available in the United States and other global markets.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Suno launches v6 music models built with Warner, BMG, and Believe",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Suno launches v6 music models built with Warner, BMG, and Believe",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "Suno has unveiled a new AI music model generation, v6, in three versions, built together with Warner Music Group, BMG, and Believe. All older models are being shut down. Songs can now be partially changed through text commands or generated multimodally from text, audio, and images. The company won't say which catalogs went into training, while Universal and Sony keep suing.",
+     "note": "",
+     "url": "https://the-decoder.com/suno-launches-v6-music-models-built-with-warner-bmg-and-believe/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "Suno has released its v6 AI music generation models in three versions, which were developed in partnership with Warner Music Group, BMG, and Believe. Alongside this launch, the company is retiring all of its previous models. The new generation allows users to modify songs partially via text instructions or create music multimodally using combinations of text, audio, and images. Suno has declined to specify which music catalogs were used for training purposes, even as Universal and Sony maintain ongoing lawsuits against the firm.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Hugging Face's new ML Intern lets anyone run machine learning experiments through a simple chat",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Hugging Face's new ML Intern lets anyone run machine learning experiments through a simple chat",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "Hugging Face launched \"ML Intern,\" an AI assistant built into its chatbot that lets users run machine learning experiments without any ML expertise.",
+     "note": "",
+     "url": "https://the-decoder.com/hugging-faces-new-ml-intern-lets-anyone-run-machine-learning-experiments-through-a-simple-chat/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "Hugging Face has introduced \"ML Intern,\" an artificial intelligence assistant integrated into its chatbot that enables individuals to execute machine learning experiments without possessing machine learning expertise.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Apple has a new way to prove your iPhone photos aren’t AI slop",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Apple has a new way to prove your iPhone photos aren’t AI slop",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "Apple introduced Apple Reference Image to help users determine whether photos have been edited, including alterations made by AI.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/09/09/apple-has-a-new-way-prove-your-iphone-photos-arent-ai-slop/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "What OpenAI’s latest controversy tells us about the future of math",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "What OpenAI’s latest controversy tells us about the future of math",
+     "source": "MIT Technology Review",
+     "date": "2026-09-09",
+     "extract": "OpenAI’s latest mathematical milestone has quickly become mired in controversy. Today, the company announced that its agents have solved one of the Millennium Prize Problems, some of the most important open problems in mathematics. Under normal circumstances, that solution would be a huge feather in OpenAI’s cap. But the announcement has been overshadowed by accusations…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "OpenAI agents have solved one of the Millennium Prize Problems, which are some of the most important open problems in mathematics. Although this mathematical milestone would normally be a major achievement for the company, the announcement was quickly mired in controversy. The achievement has now been overshadowed by accusations.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "There aren’t AirPods with cameras yet and I hope it stays that way",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "There aren’t AirPods with cameras yet and I hope it stays that way",
+     "source": "The Verge",
+     "date": "2026-09-09",
+     "extract": "September Apple events are always a swirl of information and new, exciting products, and today's was no different. Apple announced its first foldable, the iPhone Duo, alongside the iPhone 18 Pro and Pro Max; active noise cancellation (ANC) is now on the cheapest AirPods model, the AirPods 5; and a Siri Recap feature comes to",
+     "note": "",
+     "url": "https://www.theverge.com/tech/993064/no-airpods-with-cameras-apple-event",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7323,
+   "summary": "Apple revealed its first foldable device, the iPhone Duo, alongside the iPhone 18 Pro and Pro Max during its September event. The presentation also included the introduction of active noise cancellation to the budget AirPods 5 and a new Siri Recap capability.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "ICYMI: What landed for AI builders in August 2026",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "ICYMI: What landed for AI builders in August 2026",
+     "source": "Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "A recap of August 2026 launches for AI builders across Amazon Bedrock, Amazon Bedrock AgentCore, and Strands: million-token context for OpenAI models, cross-Region inference, agents that run for up to 14 days on dedicated compute, expanded AWS GovCloud availability, and Strands Robots for physical deployment.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-august-2026/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7083,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "MIT Schwarzman College of Computing launches pilot to help educators teach AI across disciplines",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "MIT Schwarzman College of Computing launches pilot to help educators teach AI across disciplines",
+     "source": "MIT News",
+     "date": "2026-09-09",
+     "extract": "A weeklong summer workshop brought higher education faculty to campus to explore how AI and machine learning materials can be adapted for their classrooms.",
+     "note": "",
+     "url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-launches-pilot-help-educators-teach-ai-across-disciplines-0909",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7083,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "AI Models Are Watermarking Text—Will You Notice?",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "AI Models Are Watermarking Text—Will You Notice?",
+     "source": "IEEE Spectrum",
+     "date": "2026-09-09",
+     "extract": "On 11 August, Anthropic announced that all future Claude models will generate text that contains a watermark that identifies its results as AI generated. The company is not alone. Google has its own text watermark (which Anthropic’s is based on) it uses on the output of its Gemini models . OpenAI has yet to introduce a text watermark but it plans to do so . The rapid spread of watermarking is in part a response to the European Union’s AI Act , which mandates watermarks for AI models released after 2 August, 2026, along with other planned and proposed regulations aimed at curbing the spread of deceptive or manipulative AI-generated content.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/ai-watermark-text-anthropic-openai",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7083,
+   "summary": "Anthropic announced on 11 August that every upcoming Claude model will incorporate a watermark in its text to mark the output as AI-generated. This technology relies on Google's text watermark system, which is currently used for Gemini models. Meanwhile, OpenAI intends to implement a text watermark in the future, though it has not done so yet. The widespread adoption of watermarking partly addresses the European Union’s AI Act, which requires watermarks for AI models launched after 2 August, 2026, alongside other regulations designed to limit deceptive or manipulative content generated by artificial intelligence.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Amazon SageMaker Feature Store introduces UpdateRecord for feature-level writes",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Amazon SageMaker Feature Store introduces UpdateRecord for feature-level writes",
+     "source": "Artificial Intelligence",
+     "date": "2026-09-08",
+     "extract": "Amazon SageMaker Feature Store now supports feature-level writes. With the new UpdateRecord API, you can update one or more feature values in a single call without reading or rewriting the entire record. It is available for both the Standard (Amazon DynamoDB) and In-Memory (Amazon ElastiCache) online store tiers.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-feature-store-introduces-updaterecord-for-feature-level-writes/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.7017,
+   "summary": "Amazon SageMaker Feature Store has launched support for feature-level writes. The new UpdateRecord API allows users to modify one or more feature values within a single call, eliminating the need to read or rewrite the full record. This capability is accessible across both the Standard online store tier, which utilizes Amazon DynamoDB, and the In-Memory online store tier, which utilizes Amazon ElastiCache.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Quoting Calif Research",
+   "latest": "2026-09-10",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.4,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Quoting Calif Research",
+     "source": "Simon Willison's Weblog",
+     "date": "2026-09-10",
+     "extract": "Today, we're releasing a demo of WeWorm, the first zero-click worm to spread through WeChat calls across iOS and Android. [...] The victim does not need to answer the call, or interact with their phone at all. Even if they do answer, they hear nothing, and the exploit still succeeds. [...] Working with AI, our team found the bug and wrote the first remote code execution (RCE) exploit in about two days. Building the worm took one more week. A worm at this scale used to be the kind of thing that took a larger team months. AI can already do most of the work here. Our team provided the judgment about what to target and how to test it safely.",
+     "note": "",
+     "url": "https://simonwillison.net/2026/Sep/10/calif-research/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.691,
+   "summary": "Quoting Calif Research has unveiled a demo of WeWorm, identified as the first zero-click worm capable of spreading through WeChat calls on both iOS and Android platforms. The exploit succeeds without requiring the victim to answer the call or interact with the phone, and targets hear nothing even if they do answer. Collaborating with AI, the team discovered the bug and developed the first remote code execution exploit in approximately two days, while constructing the worm required an additional week.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Deepmind's AlphaGenome Atlas maps every possible DNA change in the human genome",
+   "latest": "2026-09-09",
+   "n_sources": 4,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Deepmind's AlphaGenome Atlas maps every possible DNA change in the human genome",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "Google Deepmind has used the AlphaGenome Atlas to predict what each of the roughly nine billion possible single-letter changes in the human genome could do. The dataset spans one petabyte, more than 30 times the size of the AlphaFold database. In one epilepsy case, the atlas helped pinpoint a previously overlooked variant as the likely cause.",
+     "note": "",
+     "url": "https://the-decoder.com/deepminds-alphagenome-atlas-maps-every-possible-dna-change-in-the-human-genome/",
+     "kind": "news"
+    },
+    {
+     "title": "Google's AI genome system evaluates every possible one-base change",
+     "source": "AI",
+     "date": "2026-09-09",
+     "extract": "Most one-base changes to the human genome do nothing, but a few are significant.",
+     "note": "",
+     "url": "https://arstechnica.com/science/2026/09/googles-ai-genome-system-evaluates-every-possible-one-base-change/",
+     "kind": "news"
+    },
+    {
+     "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+     "source": "Google DeepMind News",
+     "date": "2026-09-08",
+     "extract": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+     "note": "",
+     "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+     "kind": "news"
+    },
+    {
+     "title": "Google DeepMind Maps 9 Billion Possible DNA Variants",
+     "source": "IEEE Spectrum",
+     "date": "2026-09-08",
+     "extract": "DNA is often explained as a codebook or set of instructions for producing proteins, and ultimately, life. Some stretches of DNA, called genes, code for proteins, but the vast majority of DNA is considered “noncoding.” Some of it has no known function, while other segments are critical to regulating gene activity. These regulatory elements can interact in complicated ways, and their effects can vary across different cells and tissues. Some also influence genes located far away in the genome. Understanding how changes in DNA affect this regulation “is fundamental to understanding most disease,” says Carl de Boer , a genomicist at the University of British Columbia.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/alphagenome-atlas",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6533,
+   "summary": "Google Deepmind has leveraged the AlphaGenome Atlas to forecast the potential impacts of approximately nine billion individual single-letter alterations in the human genome. Encompassing one petabyte of data, this new dataset exceeds the magnitude of the AlphaFold database by a factor of 30. Furthermore, the atlas successfully assisted in identifying a previously neglected variant as the probable cause in a specific epilepsy case.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Putting sign language AI into users’ hands",
+   "latest": "2026-08-12",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Putting sign language AI into users’ hands",
+     "source": "Google DeepMind News",
+     "date": "2026-08-12",
+     "extract": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
+     "note": "",
+     "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6417,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Delivering Vera: NVIDIA’s First CPU Built for Agents Is Shipping Now",
+   "latest": "2026-08-27",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Delivering Vera: NVIDIA’s First CPU Built for Agents Is Shipping Now",
+     "source": "NVIDIA Blog",
+     "date": "2026-08-27",
+     "extract": "NVIDIA Vice President of Hyperscale and HPC Ian Buck hand-delivers Vera CPU systems across the AI ecosystem as Vera begins shipping at scale.",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6217,
+   "summary": "NVIDIA has commenced shipments of Vera, its inaugural CPU designed for agents. Ian Buck, NVIDIA Vice President of Hyperscale and HPC, is personally delivering these Vera CPU systems across the artificial intelligence ecosystem as mass distribution gets underway.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
+   "latest": "2026-08-25",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
+     "source": "NVIDIA Blog",
+     "date": "2026-08-25",
+     "extract": "NVIDIA is bringing the next wave of RTX gaming to the Gamescom conference running this week in Cologne, Germany, with support for new games, anti-cheat technologies and increased visual quality. Electronic Arts, Embark and Ubisoft are among the latest game publishers and developers bringing their blockbuster titles to NVIDIA RTX Spark ahead of its launch",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6083,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+   "latest": "2026-08-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+     "source": "NVIDIA Blog",
+     "date": "2026-08-24",
+     "extract": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today, the NVIDIA Vera Rubin rack-scale system NVIDIA Groq",
+     "note": "",
+     "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6017,
+   "summary": "NVIDIA is expanding the Vera Rubin rack-scale system with fast token generation designed for agentic systems as Groq 3 LPX enters full production. According to the announcement, the Vera Rubin NVL72 will incorporate this fast token generation to support the next era of AI inference, which will be defined by how every layer of the AI factory works together rather than a single breakthrough chip, network, or system.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "What It Takes to Be an Adaptable Engineer",
+   "latest": "2026-08-24",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "What It Takes to Be an Adaptable Engineer",
+     "source": "IEEE Spectrum",
+     "date": "2026-08-24",
+     "extract": "The AI boom has disrupted the way engineers work, introducing new tools to learn, raising expectations for what teams can achieve in a workday, and making it harder to get hired in the first place. This makes it difficult to advise students on which specific coding languages or technical skills they should learn. So amidst the uncertainty, advice for young professionals often turns to a common refrain: Be adaptable. But what does adaptability look like in practice? Engineers often operate on the cutting edge of technology, so dealing with change is a normal part of the job, says Samantha Brunhaver , an associate professor of engineering at Arizona State University, in Tempe.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/adaptable-engineer-core-skills",
+     "kind": "news"
+    }
+   ],
+   "score": 0.6017,
+   "summary": "The artificial intelligence boom has disrupted engineering workflows by introducing novel tools, elevating daily productivity expectations, and increasing hiring difficulty. This environment complicates guidance for students regarding which specific technical skills or coding languages to master. According to Samantha Brunhaver, an associate professor of engineering at Arizona State University in Tempe, handling change is a standard aspect of the profession because engineers frequently work on the cutting edge of technology. Consequently, amid this uncertainty, recommendations for young professionals frequently center on the necessity of adaptability.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "GPT-6 Astra: The next generation in intelligence for work",
+   "latest": "2026-09-09",
+   "n_sources": 3,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "GPT-6 Astra: The next generation in intelligence for work",
+     "source": "OpenAI News",
+     "date": "2026-09-09",
+     "extract": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
+     "note": "",
+     "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+     "kind": "news"
+    },
+    {
+     "title": "GPT-6 Astra, Looped Transformers, and Hidden Reasoning",
+     "source": "Ahead of AI",
+     "date": "2026-09-09",
+     "extract": "A Look at Recurrent Depth, Hidden Chains of Thought, and Recent Research on Looping Transformer Blocks",
+     "note": "",
+     "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+     "kind": "news"
+    },
+    {
+     "title": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock",
+     "source": "Artificial Intelligence",
+     "date": "2026-09-08",
+     "extract": "GPT-6 Astra from OpenAI is now generally available on Amazon Bedrock. It brings deeper reasoning and sharper judgment to your most demanding tasks, running on the Amazon Bedrock inference engine built for high performance, security, and scale.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.5983,
+   "summary": "OpenAI has introduced GPT-6 Astra as its most advanced model for business applications. The system features enhanced reasoning capabilities alongside computer use functions. Additionally, it offers improved writing and design judgment.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "On the Navier–Stokes Millennium Prize Problem",
+   "latest": "2026-09-08",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "On the Navier–Stokes Millennium Prize Problem",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "We’re sharing an AI-generated solution to the Navier–Stokes Millennium Prize Problem, including a writeup and a formal proof in Lean.",
+     "note": "",
+     "url": "https://openai.com/index/navier-stokes-solution",
+     "kind": "news"
+    },
+    {
+     "title": "On the Navier–Stokes Millennium Prize Problem",
+     "source": "Simon Willison's Weblog",
+     "date": "2026-09-08",
+     "extract": "On the Navier–Stokes Millennium Prize Problem Impressive result from OpenAI, who used an unreleased model to produce a resolution to the Navier–Stokes existence and smoothness problem , one of the seven Millennium Prize Problems that have been subject to a $1,000,000 prize since May 24th, 2000. The discovery is somewhat overshadowed by accusations of skulduggery from Tristan Buckmaster, an NYU mathematics professor who was collaborating on related problems with Levent Alpöge, an accomplished mathematician who currently works for Anthropic. Tristan's complaint accompanied a hastily published version of their own results. Here's the PDF describing what happened .",
+     "note": "",
+     "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.5367,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+   "latest": "2026-08-11",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+     "source": "Microsoft Research",
+     "date": "2026-08-11",
+     "extract": "Radiology AI is evolving beyond report generation. CARE-X explores a unified approach that combines flexible reasoning, calibrated predictions, and measurement-based tools for chest X-ray interpretation.",
+     "note": "",
+     "url": "https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Together AI announces strategic partnership with Moonshot AI to natively serve Kimi models",
+   "latest": "2026-07-29",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": true,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Together AI announces strategic partnership with Moonshot AI to natively serve Kimi models",
+     "source": "Together.ai",
+     "date": "2026-07-29",
+     "extract": "Together AI partners with Moonshot AI to natively serve Kimi models, starting with the 2.8T parameter Kimi K3, with day zero access and post-training.",
+     "note": "",
+     "url": "https://www.together.ai/blog/together-ai-announces-strategic-partnership-with-moonshot-ai-to-natively-serve-kimi-models",
+     "kind": "news"
+    }
+   ],
+   "score": 0.515,
+   "summary": "Together AI has formed a strategic partnership with Moonshot AI to natively host Kimi models. The collaboration begins with the 2.8T parameter Kimi K3, providing day zero access and post-training capabilities.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The AI policy window is open. We need to act.",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The AI policy window is open. We need to act.",
+     "source": "OpenAI News",
+     "date": "2026-09-09",
+     "extract": "Chris Lehane argues that stronger AI capabilities require stronger safety evidence, shared standards, and durable policy action while the policy window remains open.",
+     "note": "",
+     "url": "https://openai.com/index/ai-policy-window",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4883,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Paul Christiano joins OpenAI Foundation Board",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Paul Christiano joins OpenAI Foundation Board",
+     "source": "OpenAI News",
+     "date": "2026-09-09",
+     "extract": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
+     "note": "",
+     "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4883,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Modernizing complex legacy code with AI agents.",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Modernizing complex legacy code with AI agents.",
+     "source": "Mistral AI Blog",
+     "date": "2026-09-09",
+     "extract": "Mistral helped a European energy operator migrate 40,000 lines of Fortran 77 to C++. Learn how it was done, and the lessons to carry forward.",
+     "note": "",
+     "url": "https://mistral.ai/news/legacy-code-modernization/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4883,
+   "summary": "Mistral assisted a European energy operator in migrating 40,000 lines of Fortran 77 to C++. The project demonstrated how artificial intelligence agents can modernize complex legacy code.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "How GPT-5.6 Sol helps run quantum computing experiments",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
+     "note": "",
+     "url": "https://openai.com/index/codex-quantum-computing-experiments",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "An MIT researcher utilizes GPT-5.6 Sol alongside Codex to autonomously execute quantum computing experiments, calibrate qubits, and examine results. This application demonstrates the model's capability in managing complex laboratory tasks.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "The Work Now Within Reach",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The Work Now Within Reach",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+     "note": "",
+     "url": "https://openai.com/index/the-work-now-within-reach",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "More capable and affordable artificial intelligence is expanding the volume of work that individuals and enterprises can achieve. These technological advancements are simultaneously making growth more economical.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Funding grants for new research into AI and teen development",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Funding grants for new research into AI and teen development",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
+     "note": "",
+     "url": "https://openai.com/index/teen-development-research-grants",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
+     "note": "",
+     "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "1Password increases engineering productivity 21% with Codex",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "1Password increases engineering productivity 21% with Codex",
+     "source": "OpenAI News",
+     "date": "2026-09-08",
+     "extract": "Engineers at 1Password use Codex to rapidly build new features and internal tools, reaching production-readiness while maintaining rigorous security policies.",
+     "note": "",
+     "url": "https://openai.com/index/1password",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4817,
+   "summary": "1Password achieved a 21% boost in engineering productivity by utilizing Codex. The engineering team uses Codex to quickly develop new features and internal tools. This technology allows them to reach production-readiness while successfully adhering to strict security policies.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "An Alien Mind",
+   "latest": "2026-09-06",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 1.0,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "An Alien Mind",
+     "source": "OpenAI News",
+     "date": "2026-09-06",
+     "extract": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+     "note": "",
+     "url": "https://openai.com/index/an-alien-mind",
+     "kind": "news"
+    }
+   ],
+   "score": 0.4683,
+   "summary": "Jakub Pachocki has discussed the growing capabilities of artificial intelligence alongside the difficulty of ensuring its alignment. In light of these developments, he emphasized the necessity for more robust safeguards. Additionally, he advocated for coordinated international efforts to address the issue.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "AI safety panic goes mainstream after Anthropic researcher's warnings land on CNN and Fox News",
+   "latest": "2026-09-10",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "AI safety panic goes mainstream after Anthropic researcher's warnings land on CNN and Fox News",
+     "source": "The Decoder",
+     "date": "2026-09-10",
+     "extract": "Jacob Coxon, a departing Anthropic researcher, warned on CNN that self-improving AI poses an existential threat to humanity. Safety researchers at Anthropic and OpenAI share his views, and US politicians and Joe Rogan have picked up the topic. But cultural and financial interests are also at play behind these warnings, and the extinction scenario remains an extreme and contested position.",
+     "note": "",
+     "url": "https://the-decoder.com/ai-safety-panic-goes-mainstream-after-anthropic-researchers-warnings-land-on-cnn-and-fox-news/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.399,
+   "summary": "Departing Anthropic researcher Jacob Coxon appeared on CNN to warn that self-improving artificial intelligence presents an existential danger to mankind. This concern is also held by safety investigators at both OpenAI and Anthropic, while the subject has additionally gained traction among US politicians and Joe Rogan. At the same time, cultural and financial motivations influence these cautions, and the doomsday scenario continues to be a heavily debated and extreme stance.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Top AI spenders cut per-employee costs by nearly 10 percent in August",
+   "latest": "2026-09-10",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Top AI spenders cut per-employee costs by nearly 10 percent in August",
+     "source": "The Decoder",
+     "date": "2026-09-10",
+     "extract": "The Ramp AI Index for September 2026 shows AI spending per employee among the top 1 percent of US companies fell nearly 10 percent in August. The price per million tokens has dropped 41 percent since March 2026, and companies are actively shifting usage away from expensive frontier models toward cheaper alternatives. For providers like OpenAI and Anthropic, the question is whether volume growth is fast enough to make up for falling prices.",
+     "note": "",
+     "url": "https://the-decoder.com/top-ai-spenders-cut-per-employee-costs-by-nearly-10-percent-in-august/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.399,
+   "summary": "In August 2026, leading AI spenders among the top 1 percent of US companies reduced their per-employee costs by nearly 10 percent, according to the September 2026 Ramp AI Index. This decrease coincides with a 41 percent drop in the price per million tokens since March 2026. Consequently, businesses are actively moving their usage from costly frontier models to more affordable alternatives. For providers such as OpenAI and Anthropic, this trend raises the question of whether volume growth is occurring rapidly enough to compensate for the declining prices.",
+   "summary_src": "gemini"
+  },
+  {
+   "headline": "Healthcare AI’s next test is integration",
+   "latest": "2026-09-10",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Healthcare AI’s next test is integration",
+     "source": "MIT Technology Review",
+     "date": "2026-09-10",
+     "extract": "The entrance of major AI companies into healthcare is a meaningful and welcome development, accelerating the technical foundation available to the industry. Their models are increasingly capable of processing long clinical records, interpreting complex terminology, comparing documentation against evidence and generating coherent summaries from large volumes of information. For clinicians, operators, and administrative teams who…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/09/10/1141421/healthcare-ais-next-test-is-integration/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.399,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Anthropic built an economic model that frames its CEO's bleakest job forecasts as an outlier scenario",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Anthropic built an economic model that frames its CEO's bleakest job forecasts as an outlier scenario",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "Anthropic published an economic model with three scenarios for the US economy through 2030. In the extreme scenario, output doubles every 4.5 years and knowledge worker unemployment hits 17.9 percent. CEO Dario Amodei's own warnings from May land squarely in that most extreme bucket.",
+     "note": "",
+     "url": "https://the-decoder.com/anthropic-built-an-economic-model-that-frames-its-ceos-bleakest-job-forecasts-as-an-outlier-scenario/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Anthropic scientist puts the odds of AI destroying humanity above ten percent this decade",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Anthropic scientist puts the odds of AI destroying humanity above ten percent this decade",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "Jacob Coxon, a former pretraining researcher at OpenAI and Anthropic, has quit and accuses both companies of knowingly risking human extinction. Anthropic colleague Evan Hubinger puts the odds of a misaligned superintelligent AI wiping out humanity within the next decade at more than ten percent.",
+     "note": "",
+     "url": "https://the-decoder.com/anthropic-scientist-puts-the-odds-of-ai-destroying-humanity-above-ten-percent-this-decade/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "OpenAI's millennium proof dispute raises the question of whether researchers can trust AI labs",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI's millennium proof dispute raises the question of whether researchers can trust AI labs",
+     "source": "The Decoder",
+     "date": "2026-09-09",
+     "extract": "The fight over an AI-generated proof of a millennium problem is heating up. Mathematician Tristan Buckmaster accuses OpenAI of academic fraud, CEO Sam Altman rejects the allegations. Terence Tao warns that cases like this could \"reverse centuries of tradition in open science.\"",
+     "note": "",
+     "url": "https://the-decoder.com/openais-millennium-proof-dispute-raises-the-question-of-whether-researchers-can-trust-ai-labs/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "OpenAI adds a prominent AI doomer to its board of directors",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "OpenAI adds a prominent AI doomer to its board of directors",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "Paul Christiano, an influential AI researcher focused on alignment, is joining the OpenAI Foundation as a member of its board.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Apple Watch’s new AI features are normalizing the idea that technology is always listening",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Apple Watch’s new AI features are normalizing the idea that technology is always listening",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "Apple says its new watches won’t save raw audio, but features that can transcribe recent speech and summarize ambient conversations raise new questions about consent, privacy, and how people behave when they know they could always be recorded.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Superintelligence is coming. Should we let it?",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Superintelligence is coming. Should we let it?",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "AI companies have been talking about superintelligent AI like it’s inevitable, but recent safety incidents like OpenAI’s Hugging Face breach are demonstrating the potential dangers of deploying AI systems that are more capable than humans. So what happens when we can’t reliably control what these systems do? On this episode of TechCrunch’s Equity podcast, Rebecca Bellan is joined by Connor Leahy, an AI researcher, entrepreneur, and now the U.S. Executive Director of",
+     "note": "",
+     "url": "https://techcrunch.com/video/superintelligence-is-coming-should-we-let-it/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "ControlAI’s Connor Leahy on why superintelligence is ‘not a weapon, it’s an adversary’",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "ControlAI’s Connor Leahy on why superintelligence is ‘not a weapon, it’s an adversary’",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "AI companies have been talking about superintelligent AI like it’s inevitable, but recent safety incidents like OpenAI’s Hugging Face breach are demonstrating the potential dangers of deploying AI systems that are more capable than humans. So what happens when we can’t reliably control what these systems do? On this episode of TechCrunch’s Equity podcast, Rebecca Bellan is joined by Connor Leahy, an AI researcher, entrepreneur, and now the U.S. Executive Director of",
+     "note": "",
+     "url": "https://techcrunch.com/podcast/controlais-connor-leahy-on-why-superintelligence-is-not-a-weapon-its-an-adversary/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Viral AI assistant Instinct now has its own email address",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Viral AI assistant Instinct now has its own email address",
+     "source": "AI News & Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "Instinct’s new email feature lets the AI agent create and manage accounts, contact businesses, handle support requests, and do more on users' behalf.",
+     "note": "",
+     "url": "https://techcrunch.com/2026/09/09/viral-ai-assistant-instinct-now-has-its-own-email-address/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "The black iPhone Pro returns",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "The black iPhone Pro returns",
+     "source": "The Verge",
+     "date": "2026-09-09",
+     "extract": "Apple has seen reason: It has a black model in the iPhone Pro lineup again. Last year, Apple went bold with its colors for the iPhone 17 Pro, offering a flashy orange, a shiny silver, and a dark blue. Don't get me wrong, they looked nice. But there was no black (or dark gray) for",
+     "note": "",
+     "url": "https://www.theverge.com/tech/993048/iphone-18-pro-black-color",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3923,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "This AI entrepreneur is developing agents that can plan ahead for the unexpected",
+   "latest": "2026-09-08",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.6,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "This AI entrepreneur is developing agents that can plan ahead for the unexpected",
+     "source": "MIT Technology Review",
+     "date": "2026-09-08",
+     "extract": "Danijar Hafner’s office in San Francisco’s SoMa district sits mostly empty. His brand-new startup is still in stealth mode and doesn’t even have its name on the door. On the day I visit, there’s only one other person there, and little in the way of furniture. But what it lacks in decor, it makes up…",
+     "note": "",
+     "url": "https://www.technologyreview.com/2026/09/08/1142088/danijar-hafner-developing-plan-ahead-agents/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3857,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "System helps humans predict when self-driving cars will make mistakes",
+   "latest": "2026-09-02",
+   "n_sources": 2,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "System helps humans predict when self-driving cars will make mistakes",
+     "source": "MIT News",
+     "date": "2026-09-02",
+     "extract": "A new method, called CW-Net, translates the reasoning process of an autonomous vehicle’s AI system into understandable concepts that explain its behavior.",
+     "note": "",
+     "url": "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
+     "kind": "news"
+    },
+    {
+     "title": "Self-Driving Cars Could Someday Take Requests",
+     "source": "IEEE Spectrum",
+     "date": "2026-08-24",
+     "extract": "This article is part of our exclusive IEEE Journal Watch series in partnership with IEEE Xplore. The idea of letting a machine do the driving for you may put a lot of people off autonomous vehicles . But research could make it possible to backseat-drive an autonomous vehicle just as you might with a human driver. Self-driving cars carefully balance a host of parameters to ensure a smooth ride, including things like speed, acceleration, and the smoothness of turns. But human driving preferences can often vary depending on how much of a rush they’re in, whether they’re feeling carsick, or how busy the traffic is.",
+     "note": "",
+     "url": "https://spectrum.ieee.org/autonomous-vehicles-motion-planner-llm",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3767,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Clearview AI Is Testing an AI Tool That Would Let Cops Unearth Your Life Online",
+   "latest": "2026-09-10",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Clearview AI Is Testing an AI Tool That Would Let Cops Unearth Your Life Online",
+     "source": "Feed: Artificial Intelligence Latest",
+     "date": "2026-09-10",
+     "extract": "InquiryIQ, a previously unreported prototype, tested a model from xAI, maker of Grok, to surface associates, social accounts, and other information about people identified through Clearview.",
+     "note": "",
+     "url": "https://www.wired.com/story/clearview-ai-is-testing-an-ai-tool-that-lets-cops-instantly-unearth-your-online-activity/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.375,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM",
+     "source": "Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "Learn how to deploy Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter open-weight model, on Amazon SageMaker HyperPod with vLLM. This walkthrough covers cluster provisioning, NVFP4 quantization, and an OpenAI-compatible endpoint with built-in reasoning, tool calling, and native MTP speculative decoding.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  },
+  {
+   "headline": "How Heurist Finance built an AI-native investment workbench on Amazon Bedrock AgentCore",
+   "latest": "2026-09-09",
+   "n_sources": 1,
+   "kind": "news",
+   "authority": 0.5,
+   "launch": false,
+   "has_extract": true,
+   "is_arxiv": false,
+   "pr_fluff": false,
+   "items": [
+    {
+     "title": "How Heurist Finance built an AI-native investment workbench on Amazon Bedrock AgentCore",
+     "source": "Artificial Intelligence",
+     "date": "2026-09-09",
+     "extract": "Learn how Heurist built Heurist Finance, a conversational AI investment workbench, on Amazon Bedrock AgentCore. This customer story shows how AgentCore payments, Identity, Memory, Code Interpreter, and Observability let a small team buy premium market data per query, isolate analysis in a sandbox, and keep every action auditable.",
+     "note": "",
+     "url": "https://aws.amazon.com/blogs/machine-learning/how-heurist-finance-built-an-ai-native-investment-workbench-on-amazon-bedrock-agentcore/",
+     "kind": "news"
+    }
+   ],
+   "score": 0.3683,
+   "summary": "",
+   "summary_src": "fallback-extract"
+  }
+ ]
+}
